@@ -30,30 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlBuscarProveedores = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlProveedores = new System.Windows.Forms.Panel();
+            this.pnlArchivos = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pctBordeCeleste = new System.Windows.Forms.PictureBox();
             this.btnArcProvUno = new Guna.UI2.WinForms.Guna2Button();
             this.btnArcProvTres = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlArchivos = new System.Windows.Forms.Panel();
             this.btnArcProvDos = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txtBuscarProveedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlBuscarProveedores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCeleste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBuscarProveedores
             // 
             this.pnlBuscarProveedores.Controls.Add(this.pictureBox3);
             this.pnlBuscarProveedores.Controls.Add(this.pictureBox2);
-            this.pnlBuscarProveedores.Controls.Add(this.guna2TextBox1);
+            this.pnlBuscarProveedores.Controls.Add(this.txtBuscarProveedor);
             this.pnlBuscarProveedores.Controls.Add(this.label1);
             this.pnlBuscarProveedores.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBuscarProveedores.Location = new System.Drawing.Point(0, 0);
@@ -61,58 +61,12 @@
             this.pnlBuscarProveedores.Size = new System.Drawing.Size(807, 85);
             this.pnlBuscarProveedores.TabIndex = 0;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::pryValdezIE.Properties.Resources.minimizar_signo;
-            this.pictureBox3.Location = new System.Drawing.Point(749, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::pryValdezIE.Properties.Resources.xCeleste;
-            this.pictureBox2.Location = new System.Drawing.Point(777, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderRadius = 15;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::pryValdezIE.Properties.Resources.Lupa;
-            this.guna2TextBox1.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.guna2TextBox1.Location = new System.Drawing.Point(20, 16);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Buscar Proveedor";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(205, 33);
-            this.guna2TextBox1.TabIndex = 1;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(17, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 16);
+            this.label1.Size = new System.Drawing.Size(139, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Proveedores Activos";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
@@ -129,6 +83,25 @@
             this.pnlProveedores.Name = "pnlProveedores";
             this.pnlProveedores.Size = new System.Drawing.Size(807, 513);
             this.pnlProveedores.TabIndex = 1;
+            // 
+            // pnlArchivos
+            // 
+            this.pnlArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.pnlArchivos.Location = new System.Drawing.Point(237, 7);
+            this.pnlArchivos.Name = "pnlArchivos";
+            this.pnlArchivos.Size = new System.Drawing.Size(564, 500);
+            this.pnlArchivos.TabIndex = 2;
+            this.pnlArchivos.Visible = false;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 22;
+            this.guna2Elipse1.TargetControl = this.pnlArchivos;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 22;
+            this.guna2Elipse2.TargetControl = this;
             // 
             // pctBordeCeleste
             // 
@@ -180,15 +153,6 @@
             this.btnArcProvTres.Text = "Zurich";
             this.btnArcProvTres.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // pnlArchivos
-            // 
-            this.pnlArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.pnlArchivos.Location = new System.Drawing.Point(237, 7);
-            this.pnlArchivos.Name = "pnlArchivos";
-            this.pnlArchivos.Size = new System.Drawing.Size(564, 500);
-            this.pnlArchivos.TabIndex = 2;
-            this.pnlArchivos.Visible = false;
-            // 
             // btnArcProvDos
             // 
             this.btnArcProvDos.BorderRadius = 22;
@@ -208,15 +172,51 @@
             this.btnArcProvDos.TabIndex = 1;
             this.btnArcProvDos.Text = "Zurich";
             // 
-            // guna2Elipse1
+            // pictureBox3
             // 
-            this.guna2Elipse1.BorderRadius = 22;
-            this.guna2Elipse1.TargetControl = this.pnlArchivos;
+            this.pictureBox3.Image = global::pryValdezIE.Properties.Resources.minimizar_signo;
+            this.pictureBox3.Location = new System.Drawing.Point(749, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(22, 30);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // guna2Elipse2
+            // pictureBox2
             // 
-            this.guna2Elipse2.BorderRadius = 22;
-            this.guna2Elipse2.TargetControl = this;
+            this.pictureBox2.Image = global::pryValdezIE.Properties.Resources.xCeleste;
+            this.pictureBox2.Location = new System.Drawing.Point(777, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(17, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // txtBuscarProveedor
+            // 
+            this.txtBuscarProveedor.AutoRoundedCorners = true;
+            this.txtBuscarProveedor.BorderRadius = 15;
+            this.txtBuscarProveedor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarProveedor.DefaultText = "";
+            this.txtBuscarProveedor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtBuscarProveedor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtBuscarProveedor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarProveedor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtBuscarProveedor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscarProveedor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtBuscarProveedor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtBuscarProveedor.IconLeft = global::pryValdezIE.Properties.Resources.Lupa;
+            this.txtBuscarProveedor.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtBuscarProveedor.Location = new System.Drawing.Point(20, 16);
+            this.txtBuscarProveedor.Name = "txtBuscarProveedor";
+            this.txtBuscarProveedor.PasswordChar = '\0';
+            this.txtBuscarProveedor.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtBuscarProveedor.PlaceholderText = "Buscar Proveedor";
+            this.txtBuscarProveedor.SelectedText = "";
+            this.txtBuscarProveedor.Size = new System.Drawing.Size(205, 33);
+            this.txtBuscarProveedor.TabIndex = 1;
             // 
             // UCProveedores
             // 
@@ -229,10 +229,10 @@
             this.Size = new System.Drawing.Size(807, 598);
             this.pnlBuscarProveedores.ResumeLayout(false);
             this.pnlBuscarProveedores.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlProveedores.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCeleste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,7 +247,7 @@
         private Guna.UI2.WinForms.Guna2Button btnArcProvTres;
         private Guna.UI2.WinForms.Guna2Button btnArcProvDos;
         private System.Windows.Forms.Panel pnlArchivos;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtBuscarProveedor;
         private System.Windows.Forms.PictureBox pctBordeCeleste;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
