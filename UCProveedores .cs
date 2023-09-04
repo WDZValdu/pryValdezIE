@@ -12,9 +12,11 @@ namespace pryValdezIE
 {
     public partial class UCProveedores : UserControl
     {
+        
         public UCProveedores()
         {
             InitializeComponent();
+            btnArcProvUno.Text = "Nombre Archivo";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -50,6 +52,12 @@ namespace pryValdezIE
         private void pictureBox3_Click(object sender, EventArgs e)
         {
           
+        }
+
+        private void btnArcProvUno_Click(object sender, EventArgs e)
+        {
+            pctBordeCeleste.Visible = true;
+            pnlArchivos.Visible = true;
         }
     }
 }

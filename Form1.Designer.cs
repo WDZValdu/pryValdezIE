@@ -35,24 +35,24 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCargarProv = new Guna.UI2.WinForms.Guna2Button();
             this.btnProveedores = new Guna.UI2.WinForms.Guna2Button();
-            this.pct = new System.Windows.Forms.PictureBox();
+            this.pctBordeProv = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             this.pnlPrincipal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.Controls.Add(this.guna2Button2);
-            this.pnlMenu.Controls.Add(this.guna2Button1);
+            this.pnlMenu.Controls.Add(this.btnCargarProv);
             this.pnlMenu.Controls.Add(this.btnProveedores);
-            this.pnlMenu.Controls.Add(this.pct);
+            this.pnlMenu.Controls.Add(this.pctBordeProv);
             this.pnlMenu.Controls.Add(this.pctLogo);
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
@@ -120,28 +120,29 @@
             this.guna2Button2.Text = "Proveedores";
             this.guna2Button2.UseTransparentBackground = true;
             // 
-            // guna2Button1
+            // btnCargarProv
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 22;
-            this.guna2Button1.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = global::pryValdezIE.Properties.Resources.business_people1;
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageOffset = new System.Drawing.Point(10, 0);
-            this.guna2Button1.Location = new System.Drawing.Point(12, 214);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(188, 43);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "Proveedores";
-            this.guna2Button1.UseTransparentBackground = true;
+            this.btnCargarProv.BackColor = System.Drawing.Color.Transparent;
+            this.btnCargarProv.BorderRadius = 22;
+            this.btnCargarProv.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnCargarProv.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnCargarProv.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCargarProv.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCargarProv.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCargarProv.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCargarProv.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnCargarProv.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.btnCargarProv.ForeColor = System.Drawing.Color.White;
+            this.btnCargarProv.Image = global::pryValdezIE.Properties.Resources.business_people1;
+            this.btnCargarProv.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCargarProv.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnCargarProv.Location = new System.Drawing.Point(12, 214);
+            this.btnCargarProv.Name = "btnCargarProv";
+            this.btnCargarProv.Size = new System.Drawing.Size(188, 43);
+            this.btnCargarProv.TabIndex = 0;
+            this.btnCargarProv.Text = "Cargar Proveedores";
+            this.btnCargarProv.UseTransparentBackground = true;
+            this.btnCargarProv.Click += new System.EventHandler(this.btnCargarProv_Click);
             // 
             // btnProveedores
             // 
@@ -168,15 +169,16 @@
             this.btnProveedores.UseTransparentBackground = true;
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
-            // pct
+            // pctBordeProv
             // 
-            this.pct.Image = global::pryValdezIE.Properties.Resources.Union;
-            this.pct.Location = new System.Drawing.Point(168, 105);
-            this.pct.Name = "pct";
-            this.pct.Size = new System.Drawing.Size(38, 106);
-            this.pct.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pct.TabIndex = 1;
-            this.pct.TabStop = false;
+            this.pctBordeProv.Image = global::pryValdezIE.Properties.Resources.Union;
+            this.pctBordeProv.Location = new System.Drawing.Point(168, 105);
+            this.pctBordeProv.Name = "pctBordeProv";
+            this.pctBordeProv.Size = new System.Drawing.Size(38, 106);
+            this.pctBordeProv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctBordeProv.TabIndex = 1;
+            this.pctBordeProv.TabStop = false;
+            this.pctBordeProv.Visible = false;
             // 
             // pctLogo
             // 
@@ -203,7 +205,7 @@
             this.pnlPrincipal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
 
@@ -215,9 +217,9 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Panel pnlPrincipal;
         private Guna.UI2.WinForms.Guna2Button btnProveedores;
-        private System.Windows.Forms.PictureBox pct;
+        private System.Windows.Forms.PictureBox pctBordeProv;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnCargarProv;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

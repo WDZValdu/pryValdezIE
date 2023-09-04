@@ -28,6 +28,7 @@ namespace pryValdezIE
             UCProveedores uCProveedores = new UCProveedores();
             this.pnlPrincipal.Controls.Add(uCProveedores);
             uCProveedores.Show();
+            pctBordeProv.Visible = true;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -38,6 +39,15 @@ namespace pryValdezIE
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnCargarProv_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            UCcargarProveedores1 uCcargarProveedores = new UCcargarProveedores1();
+            this.pnlPrincipal.Controls.Add(uCcargarProveedores);
+            uCcargarProveedores.Show();
+            pctBordeProv.Visible = false;
         }
     }
 }
