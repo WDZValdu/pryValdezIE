@@ -193,6 +193,16 @@ namespace pryValdezIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap SAncor_segurosLOGO_PNG__2_ {
+            get {
+                object obj = ResourceManager.GetObject("SAncor segurosLOGO PNG (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sancoseg {
             get {
                 object obj = ResourceManager.GetObject("sancoseg", resourceCulture);

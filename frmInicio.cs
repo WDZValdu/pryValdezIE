@@ -22,8 +22,8 @@ namespace pryValdezIE
             if(txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
             {
                 this.Hide();
-                Form1 form1 = new Form1();
-                form1.Show();
+                frmCargar frmCargar = new frmCargar();
+                frmCargar.Show();
             }
             else
             {
