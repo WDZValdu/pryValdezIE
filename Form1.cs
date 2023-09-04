@@ -16,5 +16,28 @@ namespace pryValdezIE
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            UCProveedores uCProveedores = new UCProveedores();
+            this.pnlPrincipal.Controls.Add(uCProveedores);
+            uCProveedores.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
