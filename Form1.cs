@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace pryValdezIE
@@ -15,6 +16,21 @@ namespace pryValdezIE
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Crea una instancia del UserControl que deseas mostrar en el Panel
+            UCProveedores UCProveedores = new UCProveedores();
+
+            // Agrega el UserControl al Panel
+            pnlPrincipal.Controls.Add(UCProveedores);
+
+            // Calcula la posición para centrar el UserControl
+            int x = (pnlPrincipal.Width - UCProveedores.Width) / 2;
+            int y = (pnlPrincipal.Height - UCProveedores.Height) / 25;
+
+            // Establece la posición del UserControl en el centro del Panel
+            UCProveedores.Location = new Point(x, y);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

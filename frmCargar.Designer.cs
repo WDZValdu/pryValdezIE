@@ -33,6 +33,7 @@
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +96,11 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Cargando...";
             // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 22;
+            this.guna2Elipse1.TargetControl = this;
+            // 
             // frmCargar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,5 +126,6 @@
         private System.Windows.Forms.PictureBox pctLogo;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
     }
 }
