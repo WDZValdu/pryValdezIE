@@ -20,7 +20,7 @@ namespace pryValdezIE
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            circularProgressBar1.Value += 1;
+            circularProgressBar1.Value += 4;
 
             if (circularProgressBar1.Value == 100)
             {

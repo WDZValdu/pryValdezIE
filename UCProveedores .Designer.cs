@@ -29,30 +29,38 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Nombre"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212))))), null);
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Fecha"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212))))), null);
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Tamaño"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212))))), null);
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Tipo"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212))))), null);
             this.pnlBuscarProveedores = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pctMinimizar = new System.Windows.Forms.PictureBox();
+            this.pctCerrar = new System.Windows.Forms.PictureBox();
             this.txtBuscarProveedor = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pnlProveedores = new System.Windows.Forms.Panel();
-            this.pctBordeCeleste = new System.Windows.Forms.PictureBox();
-            this.btnArcProvUno = new Guna.UI2.WinForms.Guna2Button();
-            this.btnArcProvTres = new Guna.UI2.WinForms.Guna2Button();
-            this.pnlArchivos = new System.Windows.Forms.Panel();
-            this.btnArcProvDos = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.treeView1 = new System.Windows.Forms.TreeView();
+            this.pnlProveedores = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.pnlArchivos = new System.Windows.Forms.Panel();
+            this.NOMBRE = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlBuscarProveedores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).BeginInit();
             this.pnlProveedores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBordeCeleste)).BeginInit();
+            this.pnlArchivos.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlBuscarProveedores
             // 
-            this.pnlBuscarProveedores.Controls.Add(this.pictureBox3);
-            this.pnlBuscarProveedores.Controls.Add(this.pictureBox2);
+            this.pnlBuscarProveedores.Controls.Add(this.pctMinimizar);
+            this.pnlBuscarProveedores.Controls.Add(this.pctCerrar);
             this.pnlBuscarProveedores.Controls.Add(this.txtBuscarProveedor);
             this.pnlBuscarProveedores.Controls.Add(this.label1);
             this.pnlBuscarProveedores.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,27 +69,27 @@
             this.pnlBuscarProveedores.Size = new System.Drawing.Size(802, 85);
             this.pnlBuscarProveedores.TabIndex = 0;
             // 
-            // pictureBox3
+            // pctMinimizar
             // 
-            this.pictureBox3.Image = global::pryValdezIE.Properties.Resources.minimizar_signo;
-            this.pictureBox3.Location = new System.Drawing.Point(745, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(22, 30);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pctMinimizar.Image = global::pryValdezIE.Properties.Resources.minimizar_signo;
+            this.pctMinimizar.Location = new System.Drawing.Point(745, 5);
+            this.pctMinimizar.Name = "pctMinimizar";
+            this.pctMinimizar.Size = new System.Drawing.Size(22, 30);
+            this.pctMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctMinimizar.TabIndex = 3;
+            this.pctMinimizar.TabStop = false;
+            this.pctMinimizar.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox2
+            // pctCerrar
             // 
-            this.pictureBox2.Image = global::pryValdezIE.Properties.Resources.xCeleste;
-            this.pictureBox2.Location = new System.Drawing.Point(773, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pctCerrar.Image = global::pryValdezIE.Properties.Resources.xCeleste;
+            this.pctCerrar.Location = new System.Drawing.Point(773, 6);
+            this.pctCerrar.Name = "pctCerrar";
+            this.pctCerrar.Size = new System.Drawing.Size(17, 27);
+            this.pctCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctCerrar.TabIndex = 2;
+            this.pctCerrar.TabStop = false;
+            this.pctCerrar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // txtBuscarProveedor
             // 
@@ -117,97 +125,6 @@
             this.label1.Text = "Proveedores Activos";
             this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
-            // pnlProveedores
-            // 
-            this.pnlProveedores.Controls.Add(this.pctBordeCeleste);
-            this.pnlProveedores.Controls.Add(this.btnArcProvUno);
-            this.pnlProveedores.Controls.Add(this.btnArcProvTres);
-            this.pnlProveedores.Controls.Add(this.pnlArchivos);
-            this.pnlProveedores.Controls.Add(this.btnArcProvDos);
-            this.pnlProveedores.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlProveedores.Location = new System.Drawing.Point(0, 85);
-            this.pnlProveedores.Name = "pnlProveedores";
-            this.pnlProveedores.Size = new System.Drawing.Size(807, 503);
-            this.pnlProveedores.TabIndex = 1;
-            // 
-            // pctBordeCeleste
-            // 
-            this.pctBordeCeleste.Image = global::pryValdezIE.Properties.Resources.Union__1_;
-            this.pctBordeCeleste.Location = new System.Drawing.Point(198, 13);
-            this.pctBordeCeleste.Name = "pctBordeCeleste";
-            this.pctBordeCeleste.Size = new System.Drawing.Size(39, 91);
-            this.pctBordeCeleste.TabIndex = 3;
-            this.pctBordeCeleste.TabStop = false;
-            this.pctBordeCeleste.Visible = false;
-            // 
-            // btnArcProvUno
-            // 
-            this.btnArcProvUno.BorderRadius = 22;
-            this.btnArcProvUno.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnArcProvUno.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnArcProvUno.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnArcProvUno.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnArcProvUno.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnArcProvUno.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArcProvUno.ForeColor = System.Drawing.Color.White;
-            this.btnArcProvUno.Image = global::pryValdezIE.Properties.Resources.files_and_folder;
-            this.btnArcProvUno.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArcProvUno.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnArcProvUno.Location = new System.Drawing.Point(20, 43);
-            this.btnArcProvUno.Name = "btnArcProvUno";
-            this.btnArcProvUno.Size = new System.Drawing.Size(205, 43);
-            this.btnArcProvUno.TabIndex = 0;
-            this.btnArcProvUno.Text = "Zurich";
-            this.btnArcProvUno.Click += new System.EventHandler(this.btnArcProvUno_Click);
-            // 
-            // btnArcProvTres
-            // 
-            this.btnArcProvTres.BorderRadius = 22;
-            this.btnArcProvTres.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnArcProvTres.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnArcProvTres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnArcProvTres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnArcProvTres.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnArcProvTres.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArcProvTres.ForeColor = System.Drawing.Color.White;
-            this.btnArcProvTres.Image = global::pryValdezIE.Properties.Resources.files_and_folder;
-            this.btnArcProvTres.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArcProvTres.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnArcProvTres.Location = new System.Drawing.Point(20, 187);
-            this.btnArcProvTres.Name = "btnArcProvTres";
-            this.btnArcProvTres.Size = new System.Drawing.Size(205, 43);
-            this.btnArcProvTres.TabIndex = 2;
-            this.btnArcProvTres.Text = "Zurich";
-            this.btnArcProvTres.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // pnlArchivos
-            // 
-            this.pnlArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.pnlArchivos.Location = new System.Drawing.Point(237, 7);
-            this.pnlArchivos.Name = "pnlArchivos";
-            this.pnlArchivos.Size = new System.Drawing.Size(559, 490);
-            this.pnlArchivos.TabIndex = 2;
-            this.pnlArchivos.Visible = false;
-            // 
-            // btnArcProvDos
-            // 
-            this.btnArcProvDos.BorderRadius = 22;
-            this.btnArcProvDos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnArcProvDos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnArcProvDos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnArcProvDos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnArcProvDos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnArcProvDos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArcProvDos.ForeColor = System.Drawing.Color.White;
-            this.btnArcProvDos.Image = global::pryValdezIE.Properties.Resources.files_and_folder;
-            this.btnArcProvDos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnArcProvDos.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnArcProvDos.Location = new System.Drawing.Point(20, 115);
-            this.btnArcProvDos.Name = "btnArcProvDos";
-            this.btnArcProvDos.Size = new System.Drawing.Size(205, 43);
-            this.btnArcProvDos.TabIndex = 1;
-            this.btnArcProvDos.Text = "Zurich";
-            // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 22;
@@ -217,6 +134,61 @@
             // 
             this.guna2Elipse2.BorderRadius = 22;
             this.guna2Elipse2.TargetControl = this;
+            // 
+            // treeView1
+            // 
+            this.treeView1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.treeView1.Location = new System.Drawing.Point(9, 7);
+            this.treeView1.Name = "treeView1";
+            this.treeView1.Size = new System.Drawing.Size(216, 490);
+            this.treeView1.TabIndex = 3;
+            // 
+            // pnlProveedores
+            // 
+            this.pnlProveedores.Controls.Add(this.treeView1);
+            this.pnlProveedores.Controls.Add(this.pnlArchivos);
+            this.pnlProveedores.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlProveedores.Location = new System.Drawing.Point(0, 85);
+            this.pnlProveedores.Name = "pnlProveedores";
+            this.pnlProveedores.Size = new System.Drawing.Size(807, 503);
+            this.pnlProveedores.TabIndex = 1;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NOMBRE});
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(559, 490);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // pnlArchivos
+            // 
+            this.pnlArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.pnlArchivos.Controls.Add(this.listView1);
+            this.pnlArchivos.Location = new System.Drawing.Point(237, 7);
+            this.pnlArchivos.Name = "pnlArchivos";
+            this.pnlArchivos.Size = new System.Drawing.Size(559, 490);
+            this.pnlArchivos.TabIndex = 2;
+            // 
+            // NOMBRE
+            // 
+            this.NOMBRE.Tag = "Nombre";
+            this.NOMBRE.Text = "Nombre";
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 22;
             // 
             // UCProveedores
             // 
@@ -231,10 +203,10 @@
             this.Size = new System.Drawing.Size(802, 588);
             this.pnlBuscarProveedores.ResumeLayout(false);
             this.pnlBuscarProveedores.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).EndInit();
             this.pnlProveedores.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pctBordeCeleste)).EndInit();
+            this.pnlArchivos.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -243,16 +215,16 @@
 
         private System.Windows.Forms.Panel pnlBuscarProveedores;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel pnlProveedores;
-        private Guna.UI2.WinForms.Guna2Button btnArcProvUno;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2Button btnArcProvTres;
-        private Guna.UI2.WinForms.Guna2Button btnArcProvDos;
-        private System.Windows.Forms.Panel pnlArchivos;
         private Guna.UI2.WinForms.Guna2TextBox txtBuscarProveedor;
-        private System.Windows.Forms.PictureBox pctBordeCeleste;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pctCerrar;
+        private System.Windows.Forms.PictureBox pctMinimizar;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Panel pnlProveedores;
+        private System.Windows.Forms.TreeView treeView1;
+        private System.Windows.Forms.Panel pnlArchivos;
+        private System.Windows.Forms.ColumnHeader NOMBRE;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
     }
 }

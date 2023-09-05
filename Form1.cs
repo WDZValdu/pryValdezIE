@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace pryValdezIE
 {
+    using System.IO;
     public partial class Form1 : Form
     {
         public Form1()
@@ -19,18 +20,8 @@ namespace pryValdezIE
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Crea una instancia del UserControl que deseas mostrar en el Panel
-            UCProveedores UCProveedores = new UCProveedores();
+            
 
-            // Agrega el UserControl al Panel
-            pnlPrincipal.Controls.Add(UCProveedores);
-
-            // Calcula la posición para centrar el UserControl
-            int x = (pnlPrincipal.Width - UCProveedores.Width) / 2;
-            int y = (pnlPrincipal.Height - UCProveedores.Height) / 25;
-
-            // Establece la posición del UserControl en el centro del Panel
-            UCProveedores.Location = new Point(x, y);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -45,6 +36,9 @@ namespace pryValdezIE
             this.pnlPrincipal.Controls.Add(uCProveedores);
             uCProveedores.Show();
             pctBordeProv.Visible = true;
+            pctBordeCargarProv.Visible = false;
+            btnProveedores.Checked = true;
+            btnCargarProv.Checked = false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -64,6 +58,17 @@ namespace pryValdezIE
             this.pnlPrincipal.Controls.Add(uCcargarProveedores);
             uCcargarProveedores.Show();
             pctBordeProv.Visible = false;
+
+            pctBordeCargarProv.Visible =true;
+            btnProveedores.Checked = false;
+            btnCargarProv.Checked = true;
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmInicio frmInicio = new frmInicio();
+            frmInicio.Show();
         }
     }
 }
