@@ -19,13 +19,15 @@ namespace pryValdezIE
         {
             InitializeComponent();
             LlenarTreeView();
+            lblTitulo.Visible = false;
+            pnlArchivos.Visible = false;
             //btnArcProvUno.Text = "Nombre Archivo";
         }
         private void LlenarTreeView()
         {
             TreeNode nodoMadre;
 
-            DirectoryInfo info = new DirectoryInfo(@"C:\Users\YO\Desktop\Proveedores");
+            DirectoryInfo info = new DirectoryInfo(@"C:\Users\YO\source\repos\pryValdezIE\bin\Debug\Proveedores");
             if (info.Exists == true) //POR DEFECTO el IF pregunta true
             {
                 nodoMadre = new TreeNode(info.Name);
@@ -42,6 +44,7 @@ namespace pryValdezIE
         {
             TreeNode aNode;
             DirectoryInfo[] subSubDirs;
+
 
             foreach (DirectoryInfo subDir in subDirs)
             {
@@ -110,6 +113,99 @@ namespace pryValdezIE
         {
             //pctBordeCeleste.Visible = true;
             pnlArchivos.Visible = true;
+        }
+        string leerLinea;
+        string[] separarDatos;
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
+            string NombreArchivo = treeView1.SelectedNode.Text;
+
+            StreamReader sr = new StreamReader(Archivo);
+
+            leerLinea = sr.ReadLine();
+            separarDatos = leerLinea.Split(';');
+
+            for (int indice = 0; indice < separarDatos.Length; indice++)
+            {
+                grilla.Columns.Add(separarDatos[indice], separarDatos[indice]);
+            }
+
+            while (sr.EndOfStream == false)
+            {
+                leerLinea = sr.ReadLine();
+                separarDatos = leerLinea.Split(';');
+                grilla.Rows.Add(separarDatos);
+            }
+
+            sr.Close();
+            btnGuardar.Visible = true;
+            treeView1.Enabled = false;
+            btnVolverASeleccionar.Visible = true;
+            grilla.Visible = true;
+            lblTitulo.Visible = true;
+            pnlArchivos.Visible = true;
+            lblTitulo.Text = NombreArchivo;
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
+
+            // Asegúrate de que hay un archivo seleccionado
+            if (string.IsNullOrEmpty(Archivo))
+            {
+                MessageBox.Show("Selecciona un archivo para guardar los cambios.");
+                return;
+            }
+
+            // Lee la primera línea del archivo
+            string primeraLinea = string.Empty;
+            if (File.Exists(Archivo))
+            {
+                using (StreamReader sr = new StreamReader(Archivo))
+                {
+                    primeraLinea = sr.ReadLine();
+                }
+            }
+
+            // Construye la cadena de texto con los datos del DataGridView
+            StringBuilder sb = new StringBuilder();
+
+            // Agrega la primera línea al resultado
+            sb.AppendLine(primeraLinea);
+
+            // Recorre todas las filas, excepto la primera (fila de encabezado)
+            foreach (DataGridViewRow fila in grilla.Rows)
+            {
+                if (!fila.IsNewRow)
+                {
+                    foreach (DataGridViewCell celda in fila.Cells)
+                    {
+                        if (celda.Value != null)
+                        {
+                            sb.Append(celda.Value.ToString());
+                        }
+                        sb.Append(";");
+                    }
+                    sb.AppendLine(); // Agrega un salto de línea después de cada fila
+                }
+            }
+
+            // Escribe la cadena de texto en el archivo
+            File.WriteAllText(Archivo, sb.ToString());
+
+            MessageBox.Show("Los cambios se han guardado correctamente.");
+        }
+
+        private void btnVolverASeleccionar_Click(object sender, EventArgs e)
+        {
+            treeView1.Enabled = true;
+            btnGuardar.Visible = false;
+            grilla.Visible = false;
+            grilla.Rows.Clear();
+            grilla.Columns.Clear();
         }
     }
 }

@@ -159,7 +159,7 @@
             this.lblResultado.ForeColor = System.Drawing.Color.White;
             this.lblResultado.Location = new System.Drawing.Point(126, 321);
             this.lblResultado.Name = "lblResultado";
-            this.lblResultado.Size = new System.Drawing.Size(317, 85);
+            this.lblResultado.Size = new System.Drawing.Size(317, 144);
             this.lblResultado.TabIndex = 7;
             this.lblResultado.Visible = false;
             // 
