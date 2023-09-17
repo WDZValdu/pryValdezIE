@@ -118,35 +118,42 @@ namespace pryValdezIE
         string[] separarDatos;
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
-            string NombreArchivo = treeView1.SelectedNode.Text;
-
-            StreamReader sr = new StreamReader(Archivo);
-
-            leerLinea = sr.ReadLine();
-            separarDatos = leerLinea.Split(';');
-
-            for (int indice = 0; indice < separarDatos.Length; indice++)
+            try
             {
-                grilla.Columns.Add(separarDatos[indice], separarDatos[indice]);
-            }
+                string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
+                string NombreArchivo = treeView1.SelectedNode.Text;
 
-            while (sr.EndOfStream == false)
-            {
+                StreamReader sr = new StreamReader(Archivo);
+
                 leerLinea = sr.ReadLine();
                 separarDatos = leerLinea.Split(';');
-                grilla.Rows.Add(separarDatos);
+
+                for (int indice = 0; indice < separarDatos.Length; indice++)
+                {
+                    grilla.Columns.Add(separarDatos[indice], separarDatos[indice]);
+                }
+
+                while (sr.EndOfStream == false)
+                {
+                    leerLinea = sr.ReadLine();
+                    separarDatos = leerLinea.Split(';');
+                    grilla.Rows.Add(separarDatos);
+                }
+
+                sr.Close();
+                btnGuardar.Visible = true;
+                treeView1.Enabled = false;
+                btnVolverASeleccionar.Visible = true;
+                grilla.Visible = true;
+                lblTitulo.Visible = true;
+                pnlArchivos.Visible = true;
+                lblTitulo.Text = NombreArchivo;
+
             }
-
-            sr.Close();
-            btnGuardar.Visible = true;
-            treeView1.Enabled = false;
-            btnVolverASeleccionar.Visible = true;
-            grilla.Visible = true;
-            lblTitulo.Visible = true;
-            pnlArchivos.Visible = true;
-            lblTitulo.Text = NombreArchivo;
-
+            catch (Exception)
+            {
+                MessageBox.Show("Seleccione un archivo");
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
