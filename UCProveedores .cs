@@ -27,7 +27,7 @@ namespace pryValdezIE
         {
             TreeNode nodoMadre;
 
-            DirectoryInfo info = new DirectoryInfo(@"C:\Users\YO\source\repos\pryValdezIE\bin\Debug\Proveedores");
+            DirectoryInfo info = new DirectoryInfo(Application.StartupPath +"\\Proveedores");
             if (info.Exists == true) //POR DEFECTO el IF pregunta true
             {
                 nodoMadre = new TreeNode(info.Name);
@@ -118,6 +118,9 @@ namespace pryValdezIE
         string[] separarDatos;
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            grilla.Rows.Clear();
+            grilla.Columns.Clear();
+
             try
             {
                 string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
@@ -141,9 +144,7 @@ namespace pryValdezIE
                 }
 
                 sr.Close();
-                btnGuardar.Visible = true;
-                treeView1.Enabled = false;
-                btnVolverASeleccionar.Visible = true;
+                btnGuardar.Visible = true;                          
                 grilla.Visible = true;
                 lblTitulo.Visible = true;
                 pnlArchivos.Visible = true;
@@ -205,7 +206,7 @@ namespace pryValdezIE
 
             MessageBox.Show("Los cambios se han guardado correctamente.");
         }
-
+        /*
         private void btnVolverASeleccionar_Click(object sender, EventArgs e)
         {
             treeView1.Enabled = true;
@@ -213,6 +214,6 @@ namespace pryValdezIE
             grilla.Visible = false;
             grilla.Rows.Clear();
             grilla.Columns.Clear();
-        }
+        }*/
     }
 }
