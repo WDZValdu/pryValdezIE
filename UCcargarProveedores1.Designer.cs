@@ -157,10 +157,11 @@
             this.lblResultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.lblResultado.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblResultado.ForeColor = System.Drawing.Color.White;
-            this.lblResultado.Location = new System.Drawing.Point(126, 321);
+            this.lblResultado.Location = new System.Drawing.Point(126, 306);
             this.lblResultado.Name = "lblResultado";
             this.lblResultado.Size = new System.Drawing.Size(317, 144);
             this.lblResultado.TabIndex = 7;
+            this.lblResultado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblResultado.Visible = false;
             // 
             // pnlOkey

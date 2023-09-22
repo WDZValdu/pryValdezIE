@@ -27,7 +27,7 @@ namespace pryValdezIE
                 timer1.Enabled = false;
 
                 this.Hide();
-                Form1 form1 = new Form1();
+                frmPrincipal form1 = new frmPrincipal();
                 form1.Show();
             }
         }

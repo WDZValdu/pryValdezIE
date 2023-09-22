@@ -12,11 +12,15 @@ using System.Windows.Forms;
 namespace pryValdezIE
 {
     using System.IO;
-    public partial class Form1 : Form
+    public partial class frmPrincipal : Form
     {
-        public Form1()
+        public frmPrincipal()
         {
             InitializeComponent();
+            this.pnlPrincipal.Controls.Clear();
+            UCBienvenida uCBienvenida = new UCBienvenida();
+            this.pnlPrincipal.Controls.Add(uCBienvenida);
+            uCBienvenida.Show();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -69,6 +73,21 @@ namespace pryValdezIE
             this.Hide();
             frmInicio frmInicio = new frmInicio();
             frmInicio.Show();
+        }
+
+        private void pctLogo_Click(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            UCBienvenida uCBienvenida = new UCBienvenida();
+            this.pnlPrincipal.Controls.Add(uCBienvenida);
+            uCBienvenida.Show();
+            
+            pctBordeProv.Visible = false;
+
+            pctBordeCargarProv.Visible = false;
+            btnProveedores.Checked = false;
+            btnCargarProv.Checked = false;
+
         }
     }
 }

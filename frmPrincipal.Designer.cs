@@ -1,6 +1,6 @@
 ﻿namespace pryValdezIE
 {
-    partial class Form1
+    partial class frmPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,28 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
+            this.pctBordeBtnUsuarios = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.btnCargarProv = new Guna.UI2.WinForms.Guna2Button();
             this.pctBordeCargarProv = new System.Windows.Forms.PictureBox();
             this.btnProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.pctBordeProv = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
-            this.pctBordeBtnUsuarios = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
+            this.pnlPrincipal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            this.pnlPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -68,6 +67,70 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(209, 598);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // pnlPrincipal
+            // 
+            this.pnlPrincipal.Controls.Add(this.pictureBox2);
+            this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
+            this.pnlPrincipal.TabIndex = 1;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 22;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 22;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::pryValdezIE.Properties.Resources.x;
+            this.pictureBox2.Location = new System.Drawing.Point(774, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(17, 27);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnUsuarios
+            // 
+            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnUsuarios.BorderRadius = 22;
+            this.btnUsuarios.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnUsuarios.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
+            this.btnUsuarios.Image = global::pryValdezIE.Properties.Resources.contrato;
+            this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsuarios.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnUsuarios.Location = new System.Drawing.Point(10, 304);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(188, 43);
+            this.btnUsuarios.TabIndex = 4;
+            this.btnUsuarios.Text = "Usuarios";
+            this.btnUsuarios.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnUsuarios.UseTransparentBackground = true;
+            // 
+            // pctBordeBtnUsuarios
+            // 
+            this.pctBordeBtnUsuarios.Image = global::pryValdezIE.Properties.Resources.Union;
+            this.pctBordeBtnUsuarios.Location = new System.Drawing.Point(168, 271);
+            this.pctBordeBtnUsuarios.Name = "pctBordeBtnUsuarios";
+            this.pctBordeBtnUsuarios.Size = new System.Drawing.Size(38, 106);
+            this.pctBordeBtnUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctBordeBtnUsuarios.TabIndex = 5;
+            this.pctBordeBtnUsuarios.TabStop = false;
+            this.pctBordeBtnUsuarios.Visible = false;
             // 
             // btnCerrarSesion
             // 
@@ -177,80 +240,9 @@
             this.pctLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pctLogo.TabIndex = 1;
             this.pctLogo.TabStop = false;
+            this.pctLogo.Click += new System.EventHandler(this.pctLogo_Click);
             // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.Controls.Add(this.pictureBox2);
-            this.pnlPrincipal.Controls.Add(this.pictureBox1);
-            this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
-            this.pnlPrincipal.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::pryValdezIE.Properties.Resources.x;
-            this.pictureBox2.Location = new System.Drawing.Point(774, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::pryValdezIE.Properties.Resources.menos;
-            this.pictureBox1.Location = new System.Drawing.Point(734, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(30, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 22;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // btnUsuarios
-            // 
-            this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsuarios.BorderRadius = 22;
-            this.btnUsuarios.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnUsuarios.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
-            this.btnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = global::pryValdezIE.Properties.Resources.contrato;
-            this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUsuarios.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnUsuarios.Location = new System.Drawing.Point(10, 304);
-            this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(188, 43);
-            this.btnUsuarios.TabIndex = 4;
-            this.btnUsuarios.Text = "Usuarios";
-            this.btnUsuarios.TextOffset = new System.Drawing.Point(17, 0);
-            this.btnUsuarios.UseTransparentBackground = true;
-            // 
-            // pctBordeBtnUsuarios
-            // 
-            this.pctBordeBtnUsuarios.Image = global::pryValdezIE.Properties.Resources.Union;
-            this.pctBordeBtnUsuarios.Location = new System.Drawing.Point(168, 271);
-            this.pctBordeBtnUsuarios.Name = "pctBordeBtnUsuarios";
-            this.pctBordeBtnUsuarios.Size = new System.Drawing.Size(38, 106);
-            this.pctBordeBtnUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctBordeBtnUsuarios.TabIndex = 5;
-            this.pctBordeBtnUsuarios.TabStop = false;
-            this.pctBordeBtnUsuarios.Visible = false;
-            // 
-            // Form1
+            // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -260,16 +252,15 @@
             this.Controls.Add(this.pnlMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlMenu.ResumeLayout(false);
+            this.pnlPrincipal.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            this.pnlPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,12 +274,12 @@
         private System.Windows.Forms.PictureBox pctBordeProv;
         private Guna.UI2.WinForms.Guna2Button btnCargarProv;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pctBordeCargarProv;
         private Guna.UI2.WinForms.Guna2Button btnCerrarSesion;
         private Guna.UI2.WinForms.Guna2Button btnUsuarios;
         private System.Windows.Forms.PictureBox pctBordeBtnUsuarios;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
     }
 }
 

@@ -36,7 +36,7 @@ namespace pryValdezIE
             pctOkey.Visible=true;
             lblResultado.Visible=true;
             lblResultado.Text = "El archivo se genero correctamente con el nombre de: " + txtNombreArchivo.Text
-                + " y se guardo en la siguiente ruta: " + Ruta;
+                + " y se guardo en la siguiente ruta: \n" + Ruta;
             pnlOkey.Visible=true;
             
             btnGuardarArchivo.Enabled=false;

@@ -63,6 +63,16 @@ namespace pryValdezIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _926b0a47_70fe_47c8_a39a_b62d5336348f {
+            get {
+                object obj = ResourceManager.GetObject("_926b0a47-70fe-47c8-a39a-b62d5336348f", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Boton__1_ {
             get {
                 object obj = ResourceManager.GetObject("Boton (1)", resourceCulture);
@@ -273,6 +283,16 @@ namespace pryValdezIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_AV {
+            get {
+                object obj = ResourceManager.GetObject("Logo AV", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Lupa {
             get {
                 object obj = ResourceManager.GetObject("Lupa", resourceCulture);
@@ -296,6 +316,16 @@ namespace pryValdezIE.Properties {
         internal static System.Drawing.Bitmap minimizar_signo {
             get {
                 object obj = ResourceManager.GetObject("minimizar-signo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OIG {
+            get {
+                object obj = ResourceManager.GetObject("OIG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

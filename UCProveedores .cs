@@ -19,6 +19,7 @@ namespace pryValdezIE
         {
             InitializeComponent();
             LlenarTreeView();
+            //lblContenido.Text = "Esta funcion Le permite administrar los proveedores que ya ha creado, modificar sus datos, eliminarlos o consultar su historial.";
             lblTitulo.Visible = false;
             pnlArchivos.Visible = false;
             //btnArcProvUno.Text = "Nombre Archivo";
@@ -206,14 +207,6 @@ namespace pryValdezIE
 
             MessageBox.Show("Los cambios se han guardado correctamente.");
         }
-        /*
-        private void btnVolverASeleccionar_Click(object sender, EventArgs e)
-        {
-            treeView1.Enabled = true;
-            btnGuardar.Visible = false;
-            grilla.Visible = false;
-            grilla.Rows.Clear();
-            grilla.Columns.Clear();
-        }*/
+       
     }
 }
