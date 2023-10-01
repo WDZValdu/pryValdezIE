@@ -21,8 +21,9 @@ namespace pryValdezIE
             LlenarTreeView();
             //lblContenido.Text = "Esta funcion Le permite administrar los proveedores que ya ha creado, modificar sus datos, eliminarlos o consultar su historial.";
             lblTitulo.Visible = false;
-            pnlArchivos.Visible = false;
+            grilla.Visible = false;
             //btnArcProvUno.Text = "Nombre Archivo";
+            lblContenido.Text = "Proveedores: Le permite administrar los proveedores que ya ha creado, \nmodificar sus datos, eliminarlos o consultar su historial.";
         }
         private void LlenarTreeView()
         {
@@ -40,8 +41,7 @@ namespace pryValdezIE
 
         //desde info.GetDirectories() nos da todos los nombrs
         //de carpetas
-        private void ObtenerCarpetas(DirectoryInfo[] subDirs,
-    TreeNode nodeToAddTo)
+        private void ObtenerCarpetas(DirectoryInfo[] subDirs, TreeNode nodeToAddTo)
         {
             TreeNode aNode;
             DirectoryInfo[] subSubDirs;
@@ -51,7 +51,7 @@ namespace pryValdezIE
             {
                 aNode = new TreeNode(subDir.Name, 0, 0);
                 aNode.Tag = subDir;
-                aNode.ImageKey = "folder";
+                aNode.ImageKey = "carpeta-vacia.png";
 
                 // Obtener archivos en lugar de solo carpetas
                 FileInfo[] files = subDir.GetFiles();
@@ -75,45 +75,17 @@ namespace pryValdezIE
         }
 
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-          
-        }
+      
 
         private void btnArcProvUno_Click(object sender, EventArgs e)
         {
             //pctBordeCeleste.Visible = true;
-            pnlArchivos.Visible = true;
+            grilla.Visible = true;
         }
         string leerLinea;
         string[] separarDatos;
@@ -148,9 +120,9 @@ namespace pryValdezIE
                 btnGuardar.Visible = true;                          
                 grilla.Visible = true;
                 lblTitulo.Visible = true;
-                pnlArchivos.Visible = true;
+                grilla.Visible = true;
                 lblTitulo.Text = NombreArchivo;
-
+                pctDibujo.Visible = false;
             }
             catch (Exception)
             {

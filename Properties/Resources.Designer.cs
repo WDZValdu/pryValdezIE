@@ -333,6 +333,26 @@ namespace pryValdezIE.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Prov_Transparente {
+            get {
+                object obj = ResourceManager.GetObject("Prov Transparente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Proveedor {
+            get {
+                object obj = ResourceManager.GetObject("Proveedor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Proyecto_nuevo {
             get {
                 object obj = ResourceManager.GetObject("Proyecto nuevo", resourceCulture);

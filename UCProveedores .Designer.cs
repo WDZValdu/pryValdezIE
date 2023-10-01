@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCProveedores));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pnlArchivos = new System.Windows.Forms.Panel();
             this.grilla = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.pnlProveedores = new System.Windows.Forms.Panel();
-            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.pctCerrar = new System.Windows.Forms.PictureBox();
-            this.pnlArchivos.SuspendLayout();
+            this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
+            this.lblContenido = new System.Windows.Forms.Label();
+            this.pctDibujo = new System.Windows.Forms.PictureBox();
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.pnlProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctDibujo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -73,65 +75,53 @@
             this.label1.Size = new System.Drawing.Size(219, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Proveedores Activos";
-            this.label1.Click += new System.EventHandler(this.label1_Click_2);
             // 
             // guna2Elipse1
             // 
             this.guna2Elipse1.BorderRadius = 22;
-            this.guna2Elipse1.TargetControl = this.pnlArchivos;
-            // 
-            // pnlArchivos
-            // 
-            this.pnlArchivos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.pnlArchivos.Controls.Add(this.grilla);
-            this.pnlArchivos.Location = new System.Drawing.Point(237, 92);
-            this.pnlArchivos.Name = "pnlArchivos";
-            this.pnlArchivos.Size = new System.Drawing.Size(559, 490);
-            this.pnlArchivos.TabIndex = 2;
             // 
             // grilla
             // 
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
-            this.grilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            this.grilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.grilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.grilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.grilla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grilla.ColumnHeadersHeight = 40;
             this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grilla.DefaultCellStyle = dataGridViewCellStyle43;
-            this.grilla.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grilla.DefaultCellStyle = dataGridViewCellStyle3;
             this.grilla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.grilla.Location = new System.Drawing.Point(0, 0);
+            this.grilla.Location = new System.Drawing.Point(237, 92);
             this.grilla.Name = "grilla";
             this.grilla.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grilla.RowHeadersVisible = false;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.White;
-            this.grilla.RowsDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.grilla.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.grilla.Size = new System.Drawing.Size(559, 490);
             this.grilla.TabIndex = 0;
             this.grilla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -172,26 +162,30 @@
             // 
             // pnlProveedores
             // 
+            this.pnlProveedores.Controls.Add(this.grilla);
             this.pnlProveedores.Controls.Add(this.pctCerrar);
             this.pnlProveedores.Controls.Add(this.btnGuardar);
             this.pnlProveedores.Controls.Add(this.lblTitulo);
             this.pnlProveedores.Controls.Add(this.label1);
             this.pnlProveedores.Controls.Add(this.treeView1);
-            this.pnlProveedores.Controls.Add(this.pnlArchivos);
+            this.pnlProveedores.Controls.Add(this.lblContenido);
+            this.pnlProveedores.Controls.Add(this.pctDibujo);
             this.pnlProveedores.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlProveedores.Location = new System.Drawing.Point(0, 0);
             this.pnlProveedores.Name = "pnlProveedores";
             this.pnlProveedores.Size = new System.Drawing.Size(807, 588);
             this.pnlProveedores.TabIndex = 1;
             // 
-            // guna2Elipse3
+            // pctCerrar
             // 
-            this.guna2Elipse3.BorderRadius = 22;
-            this.guna2Elipse3.TargetControl = this.grilla;
-            // 
-            // guna2Elipse4
-            // 
-            this.guna2Elipse4.BorderRadius = 10;
+            this.pctCerrar.Image = global::pryValdezIE.Properties.Resources.xCeleste;
+            this.pctCerrar.Location = new System.Drawing.Point(773, 6);
+            this.pctCerrar.Name = "pctCerrar";
+            this.pctCerrar.Size = new System.Drawing.Size(17, 27);
+            this.pctCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctCerrar.TabIndex = 2;
+            this.pctCerrar.TabStop = false;
+            this.pctCerrar.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnGuardar
             // 
@@ -220,16 +214,40 @@
             this.btnGuardar.Visible = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // pctCerrar
+            // lblContenido
             // 
-            this.pctCerrar.Image = global::pryValdezIE.Properties.Resources.xCeleste;
-            this.pctCerrar.Location = new System.Drawing.Point(773, 6);
-            this.pctCerrar.Name = "pctCerrar";
-            this.pctCerrar.Size = new System.Drawing.Size(17, 27);
-            this.pctCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctCerrar.TabIndex = 2;
-            this.pctCerrar.TabStop = false;
-            this.pctCerrar.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.lblContenido.BackColor = System.Drawing.Color.Transparent;
+            this.lblContenido.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.lblContenido.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblContenido.Location = new System.Drawing.Point(232, 475);
+            this.lblContenido.Name = "lblContenido";
+            this.lblContenido.Size = new System.Drawing.Size(572, 110);
+            this.lblContenido.TabIndex = 8;
+            this.lblContenido.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pctDibujo
+            // 
+            this.pctDibujo.BackColor = System.Drawing.Color.Transparent;
+            this.pctDibujo.Image = global::pryValdezIE.Properties.Resources.Prov_Transparente;
+            this.pctDibujo.Location = new System.Drawing.Point(243, -15);
+            this.pctDibujo.Name = "pctDibujo";
+            this.pctDibujo.Size = new System.Drawing.Size(561, 516);
+            this.pctDibujo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctDibujo.TabIndex = 7;
+            this.pctDibujo.TabStop = false;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.BorderRadius = 22;
+            this.guna2Elipse3.TargetControl = this.grilla;
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "carpeta-vacia.png");
+            this.imageList1.Images.SetKeyName(1, "Documento (2).png");
             // 
             // UCProveedores
             // 
@@ -241,11 +259,11 @@
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UCProveedores";
             this.Size = new System.Drawing.Size(802, 588);
-            this.pnlArchivos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).EndInit();
             this.pnlProveedores.ResumeLayout(false);
             this.pnlProveedores.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctDibujo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -257,11 +275,12 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private System.Windows.Forms.Panel pnlProveedores;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Panel pnlArchivos;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Button btnGuardar;
         private Guna.UI2.WinForms.Guna2DataGridView grilla;
         private System.Windows.Forms.Label lblTitulo;
-        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private System.Windows.Forms.PictureBox pctDibujo;
+        private System.Windows.Forms.Label lblContenido;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

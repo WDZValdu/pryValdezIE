@@ -262,5 +262,11 @@
   <ItemGroup>
     <None Include="Resources\OIG.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Prov Transparente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Proveedor.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
