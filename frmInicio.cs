@@ -16,7 +16,7 @@ namespace pryValdezIE
         {
             InitializeComponent();
         }
-
+        Int32 contador = 0;
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             if(txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
@@ -28,7 +28,15 @@ namespace pryValdezIE
             else
             {
                 MessageBox.Show("Datos de inicio de sesion incorrectos");
-            }    
+                contador += 1;
+
+            }
+
+            if (contador >= 3) 
+            {
+                MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");          
+                Application.Exit();
+            }
         }
 
         private void linklblOlvidadoCont_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
