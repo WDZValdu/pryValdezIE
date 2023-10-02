@@ -25,6 +25,7 @@ namespace pryValdezIE
             BuscarCarpeta.ShowDialog();
             Ruta = BuscarCarpeta.SelectedPath;
             lblRuta.Text = Ruta;
+            lblRuta.Visible = true;
         }
 
         private void btnGuardarArchivo_Click(object sender, EventArgs e)

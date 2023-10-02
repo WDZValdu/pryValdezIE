@@ -55,11 +55,12 @@
             // 
             this.lblRuta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblRuta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lblRuta.Location = new System.Drawing.Point(20, 98);
+            this.lblRuta.Location = new System.Drawing.Point(20, 92);
             this.lblRuta.Name = "lblRuta";
             this.lblRuta.Size = new System.Drawing.Size(325, 21);
             this.lblRuta.TabIndex = 3;
             this.lblRuta.Text = "Ruta seleccionada:";
+            this.lblRuta.Visible = false;
             // 
             // elipseUCCargarProveedores
             // 
@@ -132,7 +133,7 @@
             // txtNombreArchivo
             // 
             this.txtNombreArchivo.AutoRoundedCorners = true;
-            this.txtNombreArchivo.BorderRadius = 15;
+            this.txtNombreArchivo.BorderRadius = 20;
             this.txtNombreArchivo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombreArchivo.DefaultText = "";
             this.txtNombreArchivo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -144,13 +145,13 @@
             this.txtNombreArchivo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNombreArchivo.IconLeft = global::pryValdezIE.Properties.Resources.lapiz__2_;
             this.txtNombreArchivo.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtNombreArchivo.Location = new System.Drawing.Point(16, 133);
+            this.txtNombreArchivo.Location = new System.Drawing.Point(16, 130);
             this.txtNombreArchivo.Name = "txtNombreArchivo";
             this.txtNombreArchivo.PasswordChar = '\0';
             this.txtNombreArchivo.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtNombreArchivo.PlaceholderText = "Nombre del Archivo";
             this.txtNombreArchivo.SelectedText = "";
-            this.txtNombreArchivo.Size = new System.Drawing.Size(205, 33);
+            this.txtNombreArchivo.Size = new System.Drawing.Size(205, 43);
             this.txtNombreArchivo.TabIndex = 4;
             // 
             // btnElegirCarpeta
@@ -189,7 +190,7 @@
             this.btnGuardarArchivo.Image = global::pryValdezIE.Properties.Resources.documento;
             this.btnGuardarArchivo.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGuardarArchivo.ImageOffset = new System.Drawing.Point(5, 0);
-            this.btnGuardarArchivo.Location = new System.Drawing.Point(16, 179);
+            this.btnGuardarArchivo.Location = new System.Drawing.Point(16, 184);
             this.btnGuardarArchivo.Name = "btnGuardarArchivo";
             this.btnGuardarArchivo.Size = new System.Drawing.Size(205, 43);
             this.btnGuardarArchivo.TabIndex = 2;
