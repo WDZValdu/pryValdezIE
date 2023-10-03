@@ -134,12 +134,6 @@ namespace pryValdezIE
         {
             string Archivo = Convert.ToString(treeView1.SelectedNode.FullPath);
 
-            // Asegúrate de que hay un archivo seleccionado
-            if (string.IsNullOrEmpty(Archivo))
-            {
-                MessageBox.Show("Selecciona un archivo para guardar los cambios.");
-                return;
-            }
 
             // Lee la primera línea del archivo
             string primeraLinea = string.Empty;

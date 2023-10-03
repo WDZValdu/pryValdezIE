@@ -43,10 +43,9 @@ namespace pryValdezIE
             lblResultado.Text = "El archivo se genero correctamente con el nombre de: " + txtNombreArchivo.Text
                 + "\n y se guardo en la siguiente ruta: \n" + Ruta;
             
-            
-            btnGuardarArchivo.Enabled=false;
             ManejoArchivo.Close();
             ManejoArchivo.Dispose();
+            btnGuardarArchivo.Enabled=false;
             lblContenido.Visible=false;
             pctProveedor.Visible=false;
             lblResultado.Visible= true;
