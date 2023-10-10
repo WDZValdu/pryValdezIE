@@ -18,7 +18,7 @@ namespace pryValdezIE
         {
             InitializeComponent();
             lblContenido.Text = "Cargar Proveedores: Le permite crear nuevos \narchivos y carpetas para sus proveedores";
-            BuscarCarpeta.SelectedPath = Application.StartupPath + "\\Proveedores";
+            BuscarCarpeta.SelectedPath = Application.StartupPath;
         }
         string Ruta;
         private void btnElegirCarpeta_Click(object sender, EventArgs e)
