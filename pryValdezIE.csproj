@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClsIngresoUsuario.cs" />
+    <Compile Include="clsLog.cs" />
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +99,12 @@
     <Compile Include="UCProveedores .Designer.cs">
       <DependentUpon>UCProveedores .cs</DependentUpon>
     </Compile>
+    <Compile Include="UCUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCUsuarios.Designer.cs">
+      <DependentUpon>UCUsuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -125,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCProveedores .resx">
       <DependentUpon>UCProveedores .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCUsuarios.resx">
+      <DependentUpon>UCUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

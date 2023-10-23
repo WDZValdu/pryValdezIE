@@ -92,7 +92,7 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextOffset = new System.Drawing.Point(17, 0);
             this.btnUsuarios.UseTransparentBackground = true;
-            this.btnUsuarios.Visible = false;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click_1);
             // 
             // pctBordeBtnUsuarios
             // 

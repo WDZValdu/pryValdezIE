@@ -41,13 +41,13 @@
             this.grilla = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.treeView1 = new System.Windows.Forms.TreeView();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.pnlProveedores = new System.Windows.Forms.Panel();
             this.pctCerrar = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new Guna.UI2.WinForms.Guna2Button();
             this.lblContenido = new System.Windows.Forms.Label();
             this.pctDibujo = new System.Windows.Forms.PictureBox();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.pnlProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).BeginInit();
@@ -72,7 +72,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.label1.Location = new System.Drawing.Point(6, 56);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 24);
+            this.label1.Size = new System.Drawing.Size(221, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Proveedores Activos";
             // 
@@ -163,6 +163,13 @@
             this.treeView1.TabIndex = 3;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
             // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "files-and-folder (1).png");
+            this.imageList1.Images.SetKeyName(1, "google-docs (1).png");
+            // 
             // pnlProveedores
             // 
             this.pnlProveedores.Controls.Add(this.grilla);
@@ -244,13 +251,6 @@
             // 
             this.guna2Elipse3.BorderRadius = 22;
             this.guna2Elipse3.TargetControl = this.grilla;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "files-and-folder (1).png");
-            this.imageList1.Images.SetKeyName(1, "google-docs (1).png");
             // 
             // UCProveedores
             // 

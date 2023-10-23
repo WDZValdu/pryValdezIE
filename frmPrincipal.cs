@@ -89,5 +89,13 @@ namespace pryValdezIE
             btnCargarProv.Checked = false;
 
         }
+
+        private void btnUsuarios_Click_1(object sender, EventArgs e)
+        {
+            this.pnlPrincipal.Controls.Clear();
+            UCUsuarios uCUsuarios = new UCUsuarios();
+            this.pnlPrincipal.Controls.Add(uCUsuarios);
+            uCUsuarios.Show();
+        }
     }
 }
