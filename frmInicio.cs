@@ -12,9 +12,14 @@ namespace pryValdezIE
 {
     public partial class frmInicio : Form
     {
+        clsInicioSesion objBD;
         public frmInicio()
         {
             InitializeComponent();
+            objBD = new clsInicioSesion();
+            objBD.ConectarBD();
+
+            
         }
         Int32 contador = 0;
         private void btnProveedores_Click(object sender, EventArgs e)
@@ -22,8 +27,9 @@ namespace pryValdezIE
             if(txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
             {
                 this.Hide();
-                frmCargar frmCargar = new frmCargar();
-                frmCargar.Show();
+                objBD.IngresarUsuario(txtUsuario.Text, txtContraseña.Text);
+                
+
             }
             else
             {

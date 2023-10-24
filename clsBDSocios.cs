@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace pryValdezIE
 {
-    internal class ClsIngresoUsuario
+    internal class clsBDSocios
     {
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;

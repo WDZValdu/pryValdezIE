@@ -12,11 +12,11 @@ namespace pryValdezIE
 {
     public partial class UCUsuarios : UserControl
     {
-        ClsIngresoUsuario objBD;
+        clsBDSocios objBD;
         public UCUsuarios()
         {
             InitializeComponent();
-            objBD = new ClsIngresoUsuario();
+            objBD = new clsBDSocios();
             objBD.ConectarBD();
 
             lblConectado.Text = objBD.EstadoConexion;
