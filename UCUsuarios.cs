@@ -35,7 +35,7 @@ namespace pryValdezIE
         {
             try 
             {
-                objBD.BuscarPorID(int.Parse(txtNumero.Text));               
+                objBD.BuscarPorID(int.Parse(txtNumero.Text), grilla);               
 
             }
             catch (Exception)

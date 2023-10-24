@@ -24,7 +24,7 @@ namespace pryValdezIE
         {
             try
             {
-                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\agusv\\source\\repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\Alumno\\Source\\Repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
                 conexionBD.Open();
                 EstadoConexion = "Conectado";
             }
@@ -83,7 +83,7 @@ namespace pryValdezIE
             }
         }
 
-        public void BuscarPorID(int codigo)
+        public void BuscarPorID(int codigo, DataGridView grilla)
         {
 
             comandoBD = new OleDbCommand();
@@ -107,7 +107,12 @@ namespace pryValdezIE
                     {
 
                         //datosTabla += "-" + lectorBD[0]; //dato d la comlumna 0
-                        MessageBox.Show("El Cliente " + lectorBD[0] + " Existente", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("El Cliente " + lectorBD[0] + " Existente", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        grilla.Rows.Clear();
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+
+                        
                         Find = true;      
                         
                         break;
