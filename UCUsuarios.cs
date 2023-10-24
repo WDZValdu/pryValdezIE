@@ -12,14 +12,36 @@ namespace pryValdezIE
 {
     public partial class UCUsuarios : UserControl
     {
+        ClsIngresoUsuario objBD;
         public UCUsuarios()
         {
             InitializeComponent();
+            objBD = new ClsIngresoUsuario();
+            objBD.ConectarBD();
+
+            lblConectado.Text = objBD.EstadoConexion;
+            lblConectado.BackColor = Color.Green;
+
+            objBD.TraerDatos(grilla);
         }
 
-        private void btnMostrarDatos_Click(object sender, EventArgs e)
+        private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
-            
+            txtNumero.Visible = true;
+            btnBuscar.Visible = true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try 
+            {
+                objBD.BuscarPorID(int.Parse(txtNumero.Text));               
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese un numero");
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace pryValdezIE
         {
             try
             {
-                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = E:\\Escritorio\\Bases de datos\\EL_CLUB.accdb");
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\agusv\\source\\repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
                 conexionBD.Open();
                 EstadoConexion = "Conectado";
             }
@@ -64,17 +64,61 @@ namespace pryValdezIE
             comandoBD.CommandText = "SOCIOS";
 
             lectorBD = comandoBD.ExecuteReader();
+            grilla.Columns.Add("ID", "ID");
             grilla.Columns.Add("Nombre", "Nombre");
             grilla.Columns.Add("Apellido", "Apellido");
+            grilla.Columns.Add("Pais", "Pais");
             grilla.Columns.Add("Edad", "Edad");
+            grilla.Columns.Add("Ingreso", "Ingreso");
+            grilla.Columns.Add("Puntaje", "Puntaje");
 
             //leo como si fuera un archivo
             if (lectorBD.HasRows)
             {
                 while (lectorBD.Read())
                 {
-                    datosTabla += "-" + lectorBD[1];
-                    grilla.Rows.Add(lectorBD[1], lectorBD[2], lectorBD[3]);
+                    datosTabla += "-" + lectorBD[0];
+                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                }
+            }
+        }
+
+        public void BuscarPorID(int codigo)
+        {
+
+            comandoBD = new OleDbCommand();
+
+            comandoBD.Connection = conexionBD;
+            //q tipo de operacion quierp hacer y que me traiga TOD la tabla con el tabledirect
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            //Que tabla traigo
+            comandoBD.CommandText = "SOCIOS"; 
+            //abre la tabla y muestra por renglon
+            lectorBD = comandoBD.ExecuteReader(); 
+
+
+            //SI TIENE FILAS
+            if (lectorBD.HasRows) 
+            {
+                bool Find = false;
+                while (lectorBD.Read()) //mientras pueda leer, mostrar (leer)
+                {
+                    if (int.Parse(lectorBD[0].ToString()) == codigo)
+                    {
+
+                        //datosTabla += "-" + lectorBD[0]; //dato d la comlumna 0
+                        MessageBox.Show("El Cliente " + lectorBD[0] + " Existente", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Find = true;      
+                        
+                        break;
+                    }
+
+                }
+                if (Find == false)
+                {
+
+                    MessageBox.Show("NO Existente" + lectorBD[0], "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
                 }
             }
         }

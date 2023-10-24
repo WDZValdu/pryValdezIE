@@ -36,12 +36,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblConectado = new System.Windows.Forms.ToolStripStatusLabel();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.grilla = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.btnMostrarDatos = new Guna.UI2.WinForms.Guna2Button();
+            this.btnFiltrar = new Guna.UI2.WinForms.Guna2Button();
+            this.txtNumero = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
@@ -55,18 +57,18 @@
             // 
             this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Top;
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
+            this.lblConectado});
             this.statusStrip1.Location = new System.Drawing.Point(0, 0);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(802, 22);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // toolStripStatusLabel1
+            // lblConectado
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(65, 17);
-            this.toolStripStatusLabel1.Text = "Conectado";
+            this.lblConectado.Name = "lblConectado";
+            this.lblConectado.Size = new System.Drawing.Size(33, 17);
+            this.lblConectado.Text = "boca";
             // 
             // guna2Elipse2
             // 
@@ -144,38 +146,92 @@
             this.guna2Elipse3.BorderRadius = 22;
             this.guna2Elipse3.TargetControl = this.grilla;
             // 
-            // btnMostrarDatos
+            // btnFiltrar
             // 
-            this.btnMostrarDatos.BackColor = System.Drawing.Color.Transparent;
-            this.btnMostrarDatos.BorderRadius = 22;
-            this.btnMostrarDatos.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnMostrarDatos.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnMostrarDatos.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
-            this.btnMostrarDatos.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMostrarDatos.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMostrarDatos.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMostrarDatos.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMostrarDatos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnMostrarDatos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMostrarDatos.ForeColor = System.Drawing.Color.White;
-            this.btnMostrarDatos.Image = global::pryValdezIE.Properties.Resources.contrato;
-            this.btnMostrarDatos.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMostrarDatos.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnMostrarDatos.Location = new System.Drawing.Point(3, 92);
-            this.btnMostrarDatos.Name = "btnMostrarDatos";
-            this.btnMostrarDatos.Size = new System.Drawing.Size(188, 43);
-            this.btnMostrarDatos.TabIndex = 5;
-            this.btnMostrarDatos.Text = "Mostrar Datos";
-            this.btnMostrarDatos.TextOffset = new System.Drawing.Point(17, 0);
-            this.btnMostrarDatos.UseTransparentBackground = true;
-            this.btnMostrarDatos.Visible = false;
-            this.btnMostrarDatos.Click += new System.EventHandler(this.btnMostrarDatos_Click);
+            this.btnFiltrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFiltrar.BorderRadius = 22;
+            this.btnFiltrar.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnFiltrar.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnFiltrar.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnFiltrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnFiltrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnFiltrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnFiltrar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnFiltrar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFiltrar.ForeColor = System.Drawing.Color.White;
+            this.btnFiltrar.Image = global::pryValdezIE.Properties.Resources.contrato;
+            this.btnFiltrar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnFiltrar.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnFiltrar.Location = new System.Drawing.Point(15, 92);
+            this.btnFiltrar.Name = "btnFiltrar";
+            this.btnFiltrar.Size = new System.Drawing.Size(193, 43);
+            this.btnFiltrar.TabIndex = 5;
+            this.btnFiltrar.Text = "Filtrar Datos";
+            this.btnFiltrar.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnFiltrar.UseTransparentBackground = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click_1);
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.AutoRoundedCorners = true;
+            this.txtNumero.BorderRadius = 20;
+            this.txtNumero.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtNumero.DefaultText = "";
+            this.txtNumero.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtNumero.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtNumero.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNumero.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtNumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtNumero.IconLeft = global::pryValdezIE.Properties.Resources.lapiz__2_;
+            this.txtNumero.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtNumero.Location = new System.Drawing.Point(15, 151);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.PasswordChar = '\0';
+            this.txtNumero.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtNumero.PlaceholderText = "Numero";
+            this.txtNumero.SelectedText = "";
+            this.txtNumero.Size = new System.Drawing.Size(193, 43);
+            this.txtNumero.TabIndex = 6;
+            this.txtNumero.Visible = false;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BorderRadius = 22;
+            this.btnBuscar.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnBuscar.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnBuscar.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::pryValdezIE.Properties.Resources.contrato;
+            this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBuscar.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnBuscar.Location = new System.Drawing.Point(15, 210);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(193, 43);
+            this.btnBuscar.TabIndex = 7;
+            this.btnBuscar.Text = "Buscar ID";
+            this.btnBuscar.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnBuscar.UseTransparentBackground = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // UCUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnMostrarDatos);
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.grilla);
             this.Controls.Add(this.statusStrip1);
             this.Location = new System.Drawing.Point(0, 5);
@@ -193,11 +249,13 @@
 
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel lblConectado;
         private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2DataGridView grilla;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
-        private Guna.UI2.WinForms.Guna2Button btnMostrarDatos;
+        private Guna.UI2.WinForms.Guna2Button btnFiltrar;
+        private Guna.UI2.WinForms.Guna2TextBox txtNumero;
+        private Guna.UI2.WinForms.Guna2Button btnBuscar;
     }
 }
