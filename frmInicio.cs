@@ -24,7 +24,11 @@ namespace pryValdezIE
         Int32 contador = 0;
         private void btnProveedores_Click(object sender, EventArgs e)
         {
-            if(txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
+
+            //this.Hide();
+            objBD.IngresarUsuario(txtUsuario.Text, txtContraseña.Text, this);
+
+            /*if (txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
             {
                 this.Hide();
                 objBD.IngresarUsuario(txtUsuario.Text, txtContraseña.Text);
@@ -42,7 +46,7 @@ namespace pryValdezIE
             {
                 MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");          
                 Application.Exit();
-            }
+            }*/
         }
 
         private void linklblOlvidadoCont_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

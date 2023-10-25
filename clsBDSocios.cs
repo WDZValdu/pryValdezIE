@@ -24,7 +24,7 @@ namespace pryValdezIE
         {
             try
             {
-                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\Alumno\\Source\\Repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\agusv\\source\\repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
                 conexionBD.Open();
                 EstadoConexion = "Conectado";
             }
@@ -34,26 +34,6 @@ namespace pryValdezIE
             }
         }
 
-        public void TraerDatos()
-        {
-            //instancia un objeto en la memoria
-            comandoBD = new OleDbCommand();
-
-            comandoBD.Connection = conexionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "SOCIOS";
-
-            lectorBD = comandoBD.ExecuteReader();
-
-            //leo como si fuera un archivo
-            if (lectorBD.HasRows)
-            {
-                while (lectorBD.Read())
-                {
-                    datosTabla += "-" + lectorBD[1];
-                }
-            }
-        }
         public void TraerDatos(DataGridView grilla)
         {
             //instancia un objeto en la memoria

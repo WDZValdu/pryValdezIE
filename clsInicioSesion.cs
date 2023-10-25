@@ -22,7 +22,7 @@ namespace pryValdezIE
         {
             try
             {
-                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\Alumno\\Source\\Repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\agusv\\source\\repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
                 conexionBD.Open();
                 EstadoConexion = "Conectado";
             }
@@ -31,14 +31,16 @@ namespace pryValdezIE
                 EstadoConexion = "Error" + ex.Message;
             }
         }
-
-        public void IngresarUsuario(string varNombre, string varContraseña)
+        int varContador = 0;
+        public void IngresarUsuario(string varNombre, string varContraseña, frmInicio frmInicio)
         {
 
             comandoBD = new OleDbCommand();
-
+            
             comandoBD.Connection = conexionBD;
-            //q tipo de operacion quierp hacer y que me traiga TOD la tabla con el tabledirect
+            
+            
+            // Establece el tipo de comando y la tabla
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             //Que tabla traigo
             comandoBD.CommandText = "Usuarios";
@@ -49,22 +51,37 @@ namespace pryValdezIE
             //SI TIENE FILAS
             if (lectorBD.HasRows)
             {
-                bool Find = false;
+                
                 while (lectorBD.Read()) //mientras pueda leer, mostrar (leer)
                 {
                     if (lectorBD[1].ToString() == varNombre && lectorBD[2].ToString() == varContraseña)
                     {           
 
-                        
+                        frmInicio.Hide();
                         frmCargar frmCargar = new frmCargar();
                         frmCargar.Show();
 
                         break;
                     }
+                    else
+                    {
+                        MessageBox.Show("Datos de inicio de sesion incorrectos");
+                        varContador += 1;
+                        break;
+                    }
+                    
+                                      
 
                 }
-               
+                if (varContador >= 3)
+                {
+                    MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");
+                    Application.Exit();
+                    
+                }
             }
+            
+            
         }
 
 
