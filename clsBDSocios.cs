@@ -44,6 +44,7 @@ namespace pryValdezIE
             comandoBD.CommandText = "SOCIOS";
 
             lectorBD = comandoBD.ExecuteReader();
+
             grilla.Columns.Add("ID", "ID");
             grilla.Columns.Add("Nombre", "Nombre");
             grilla.Columns.Add("Apellido", "Apellido");
@@ -63,6 +64,7 @@ namespace pryValdezIE
             }
         }
 
+        int encontro = 0;
         public void BuscarPorID(int codigo, DataGridView grilla)
         {
 
@@ -80,7 +82,7 @@ namespace pryValdezIE
             //SI TIENE FILAS
             if (lectorBD.HasRows) 
             {
-                bool Find = false;
+                
                 while (lectorBD.Read()) //mientras pueda leer, mostrar (leer)
                 {
                     if (int.Parse(lectorBD[0].ToString()) == codigo)
@@ -91,18 +93,15 @@ namespace pryValdezIE
 
                         grilla.Rows.Clear();
                         grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
-
-                        
-                        Find = true;      
-                        
+                        encontro = 1;
                         break;
                     }
 
                 }
-                if (Find == false)
+                if (encontro == 0)
                 {
 
-                    MessageBox.Show("NO Existente" + lectorBD[0], "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("ID "+ codigo + " no existe");
 
                 }
             }

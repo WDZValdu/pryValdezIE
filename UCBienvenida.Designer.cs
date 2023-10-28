@@ -30,12 +30,12 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlBienvenida = new System.Windows.Forms.Panel();
+            this.txtVersion = new System.Windows.Forms.Label();
             this.pctCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblContenido = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.txtVersion = new System.Windows.Forms.Label();
             this.pnlBienvenida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +54,17 @@
             this.pnlBienvenida.Name = "pnlBienvenida";
             this.pnlBienvenida.Size = new System.Drawing.Size(802, 588);
             this.pnlBienvenida.TabIndex = 3;
+            // 
+            // txtVersion
+            // 
+            this.txtVersion.AutoSize = true;
+            this.txtVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVersion.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtVersion.Location = new System.Drawing.Point(740, 571);
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.Size = new System.Drawing.Size(57, 12);
+            this.txtVersion.TabIndex = 7;
+            this.txtVersion.Text = "Version 1.30";
             // 
             // pctCerrar
             // 
@@ -104,17 +115,6 @@
             // 
             this.guna2Elipse1.BorderRadius = 22;
             this.guna2Elipse1.TargetControl = this;
-            // 
-            // txtVersion
-            // 
-            this.txtVersion.AutoSize = true;
-            this.txtVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVersion.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtVersion.Location = new System.Drawing.Point(740, 571);
-            this.txtVersion.Name = "txtVersion";
-            this.txtVersion.Size = new System.Drawing.Size(57, 12);
-            this.txtVersion.TabIndex = 7;
-            this.txtVersion.Text = "Version 1.27";
             // 
             // UCBienvenida
             // 

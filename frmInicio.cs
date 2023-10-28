@@ -22,6 +22,7 @@ namespace pryValdezIE
             objBD = new clsInicioSesion();
             objBD.ConectarBD();
             objLog = new clsLog();
+            
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
             

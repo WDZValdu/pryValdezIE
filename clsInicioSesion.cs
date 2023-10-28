@@ -9,13 +9,13 @@ using System.Windows.Forms;
 
 namespace pryValdezIE
 {
-    internal class clsInicioSesion
+    internal class clsInicioSesion 
     {
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
         clsLog objLog;
-
+        
         public string EstadoConexion = "";
         public string datosTabla;
 
@@ -63,16 +63,13 @@ namespace pryValdezIE
                         DateTime varFecha = DateTime.Now;
 
                         objLog.CargarLog(varNombre, varFecha, varAccion);
-
+   
                         frmInicio.Hide();
                         frmCargar frmCargar = new frmCargar(varNombre);
                         frmCargar.Show();
                         varEncontro++;
                         break;
                     }
-                  
-                    
-                                      
 
                 }
                 if (varEncontro == 0)
