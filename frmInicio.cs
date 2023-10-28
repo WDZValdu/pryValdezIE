@@ -18,11 +18,13 @@ namespace pryValdezIE
         public frmInicio()
         {
             InitializeComponent();
+            txtUsuario.Focus();
             objBD = new clsInicioSesion();
             objBD.ConectarBD();
             objLog = new clsLog();
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
+            
 
         }
         Int32 contador = 0;
@@ -34,36 +36,9 @@ namespace pryValdezIE
             }
         }
 
-        private void btnProveedores_Click(object sender, EventArgs e)
-        {
-           string varUsuario = txtUsuario.Text; // Asigna el valor de varUsuario         
-           string varAccion = "Inicio Sesion";
-           DateTime varFecha = DateTime.Now;
-
-            //this.Hide();
+        private void btnIniciarSesion_Click(object sender, EventArgs e)
+        {                     
             objBD.IngresarUsuario(txtUsuario.Text, txtContraseña.Text, this);
-            objLog.CargarLog(varUsuario, varFecha, varAccion);
-
-
-            /*if (txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
-            {
-                this.Hide();
-                objBD.IngresarUsuario(txtUsuario.Text, txtContraseña.Text);
-                
-
-            }
-            else
-            {
-                MessageBox.Show("Datos de inicio de sesion incorrectos");
-                contador += 1;
-
-            }
-            
-            if (contador >= 3) 
-            {
-                MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");          
-                Application.Exit();
-            }*/
         }
 
         private void linklblOlvidadoCont_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -85,5 +60,25 @@ namespace pryValdezIE
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void txtUsuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && e.KeyChar == 13)
+            {
+                txtContraseña.Focus();
+                e.Handled = true;
+            }
+        }
+
+        private void txtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && e.KeyChar == 13)
+            {
+                btnIniciarSesion_Click(sender, e);
+                e.Handled = true;
+            }
+        }
+
+        
     }
 }

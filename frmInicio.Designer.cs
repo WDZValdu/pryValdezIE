@@ -53,18 +53,18 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.txtUsuario);
+            this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.linklblOlvidadoCont);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtContraseña);
-            this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnIniciarSesion);
             this.panel1.Location = new System.Drawing.Point(53, 100);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(345, 317);
-            this.panel1.TabIndex = 1;
+            this.panel1.TabIndex = 0;
             // 
             // linkLabel1
             // 
@@ -73,7 +73,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(110, 138);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(130, 13);
-            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "¿Has olvidado tu usuario?";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -85,7 +85,7 @@
             this.linklblOlvidadoCont.Location = new System.Drawing.Point(101, 215);
             this.linklblOlvidadoCont.Name = "linklblOlvidadoCont";
             this.linklblOlvidadoCont.Size = new System.Drawing.Size(149, 13);
-            this.linklblOlvidadoCont.TabIndex = 7;
+            this.linklblOlvidadoCont.TabIndex = 5;
             this.linklblOlvidadoCont.TabStop = true;
             this.linklblOlvidadoCont.Text = "¿Has olvidado tu contraseña?";
             this.linklblOlvidadoCont.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblOlvidadoCont_LinkClicked);
@@ -98,7 +98,7 @@
             this.label2.Location = new System.Drawing.Point(64, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña:";
             // 
             // label1
@@ -109,7 +109,7 @@
             this.label1.Location = new System.Drawing.Point(64, 79);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 5;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Usuario:";
             // 
             // txtContraseña
@@ -134,7 +134,8 @@
             this.txtContraseña.PlaceholderText = "Ingrese su contraseña";
             this.txtContraseña.SelectedText = "";
             this.txtContraseña.Size = new System.Drawing.Size(214, 33);
-            this.txtContraseña.TabIndex = 4;
+            this.txtContraseña.TabIndex = 1;
+            this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
             // txtUsuario
             // 
@@ -158,7 +159,8 @@
             this.txtUsuario.PlaceholderText = "Ingrese su usuario";
             this.txtUsuario.SelectedText = "";
             this.txtUsuario.Size = new System.Drawing.Size(214, 33);
-            this.txtUsuario.TabIndex = 3;
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // pictureBox2
             // 
@@ -189,10 +191,10 @@
             this.btnIniciarSesion.Location = new System.Drawing.Point(81, 249);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(188, 42);
-            this.btnIniciarSesion.TabIndex = 1;
+            this.btnIniciarSesion.TabIndex = 2;
             this.btnIniciarSesion.Text = "Iniciar Sesion";
             this.btnIniciarSesion.UseTransparentBackground = true;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnProveedores_Click);
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
             // 
             // pictureBox1
             // 

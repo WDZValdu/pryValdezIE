@@ -23,7 +23,8 @@ namespace pryValdezIE
             UCBienvenida uCBienvenida = new UCBienvenida();
             this.pnlPrincipal.Controls.Add(uCBienvenida);
             uCBienvenida.Show();
-           varUsuario = usuario;
+             varUsuario = usuario;
+
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
 

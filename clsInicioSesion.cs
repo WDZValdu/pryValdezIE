@@ -14,6 +14,7 @@ namespace pryValdezIE
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
         OleDbDataReader lectorBD;
+        clsLog objLog;
 
         public string EstadoConexion = "";
         public string datosTabla;
@@ -56,7 +57,12 @@ namespace pryValdezIE
                 while (lectorBD.Read()) //mientras pueda leer, mostrar (leer)
                 {
                     if (lectorBD[1].ToString() == varNombre && lectorBD[2].ToString() == varContraseña)
-                    {           
+                    {
+                        objLog = new clsLog();
+                        string varAccion = "Inicio Sesion";
+                        DateTime varFecha = DateTime.Now;
+
+                        objLog.CargarLog(varNombre, varFecha, varAccion);
 
                         frmInicio.Hide();
                         frmCargar frmCargar = new frmCargar(varNombre);
@@ -64,12 +70,7 @@ namespace pryValdezIE
                         varEncontro++;
                         break;
                     }
-                  /* else
-                   {
-                        MessageBox.Show("Datos de inicio de sesion incorrectos");
-                        varContador += 1;
-                        
-                   }*/
+                  
                     
                                       
 
