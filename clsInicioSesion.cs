@@ -59,7 +59,7 @@ namespace pryValdezIE
                     {           
 
                         frmInicio.Hide();
-                        frmCargar frmCargar = new frmCargar();
+                        frmCargar frmCargar = new frmCargar(varNombre);
                         frmCargar.Show();
                         varEncontro++;
                         break;

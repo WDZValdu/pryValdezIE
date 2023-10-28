@@ -14,13 +14,17 @@ namespace pryValdezIE
     using System.IO;
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+        string varUsuario;
+        clsLog objLog = new clsLog();
+        public frmPrincipal(string usuario)
         {
             InitializeComponent();
             this.pnlPrincipal.Controls.Clear();
             UCBienvenida uCBienvenida = new UCBienvenida();
             this.pnlPrincipal.Controls.Add(uCBienvenida);
             uCBienvenida.Show();
+           varUsuario = usuario;
+            
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -32,9 +36,15 @@ namespace pryValdezIE
         {
 
         }
-
+        
         private void btnProveedores_Click(object sender, EventArgs e)
         {
+            
+            string varAccion = "Ingreso a Proveedores";
+            DateTime varFecha = DateTime.Now;
+
+            objLog.CargarLog(varUsuario, varFecha, varAccion);
+
             this.pnlPrincipal.Controls.Clear();
             UCProveedores uCProveedores = new UCProveedores();
             this.pnlPrincipal.Controls.Add(uCProveedores);
@@ -57,6 +67,12 @@ namespace pryValdezIE
 
         private void btnCargarProv_Click(object sender, EventArgs e)
         {
+
+            string varAccion = "Ingreso a Cargar Proveedores";
+            DateTime varFecha = DateTime.Now;
+
+            objLog.CargarLog(varUsuario, varFecha, varAccion);
+
             this.pnlPrincipal.Controls.Clear();
             UCcargarProveedores1 uCcargarProveedores = new UCcargarProveedores1();
             this.pnlPrincipal.Controls.Add(uCcargarProveedores);
@@ -92,6 +108,11 @@ namespace pryValdezIE
 
         private void btnUsuarios_Click_1(object sender, EventArgs e)
         {
+            string varAccion = "Ingreso a Usuarios";
+            DateTime varFecha = DateTime.Now;
+
+            objLog.CargarLog(varUsuario, varFecha, varAccion);
+
             this.pnlPrincipal.Controls.Clear();
             UCUsuarios uCUsuarios = new UCUsuarios();
             this.pnlPrincipal.Controls.Add(uCUsuarios);

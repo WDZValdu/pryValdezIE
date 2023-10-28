@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,20 +14,29 @@ namespace pryValdezIE
     public partial class frmInicio : Form
     {
         clsInicioSesion objBD;
+        clsLog objLog;
         public frmInicio()
         {
             InitializeComponent();
             objBD = new clsInicioSesion();
             objBD.ConectarBD();
+            objLog = new clsLog();
 
-            
+
         }
         Int32 contador = 0;
+
+        
         private void btnProveedores_Click(object sender, EventArgs e)
         {
+           string varUsuario = txtUsuario.Text; // Asigna el valor de varUsuario         
+           string varAccion = "Inicio Sesion";
+           DateTime varFecha = DateTime.Now;
 
             //this.Hide();
             objBD.IngresarUsuario(txtUsuario.Text, txtContraseña.Text, this);
+            objLog.CargarLog(varUsuario, varFecha, varAccion);
+
 
             /*if (txtUsuario.Text == "admin" && txtContraseña.Text == "admin")
             {
@@ -41,7 +51,7 @@ namespace pryValdezIE
                 contador += 1;
 
             }
-
+            
             if (contador >= 3) 
             {
                 MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");          
