@@ -24,19 +24,26 @@ namespace pryValdezIE
             this.pnlPrincipal.Controls.Add(uCBienvenida);
             uCBienvenida.Show();
            varUsuario = usuario;
-            
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
+
+
         }
-        private void Form1_Load(object sender, EventArgs e)
+
+        private void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
         {
-            
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
 
+                string varAccion = "Cerro el programa (ESC)";
+                DateTime varFecha = DateTime.Now;
+
+                objLog.CargarLog(varUsuario, varFecha, varAccion);
+
+            }
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-        
+                
         private void btnProveedores_Click(object sender, EventArgs e)
         {
             
@@ -54,12 +61,6 @@ namespace pryValdezIE
             btnProveedores.Checked = true;
             btnCargarProv.Checked = false;
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -86,6 +87,10 @@ namespace pryValdezIE
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
         {
+            string varAccion = "Cerro sesion";
+            DateTime varFecha = DateTime.Now;
+
+            objLog.CargarLog(varUsuario, varFecha, varAccion);
             this.Hide();
             frmInicio frmInicio = new frmInicio();
             frmInicio.Show();
@@ -93,6 +98,7 @@ namespace pryValdezIE
 
         private void pctLogo_Click(object sender, EventArgs e)
         {
+
             this.pnlPrincipal.Controls.Clear();
             UCBienvenida uCBienvenida = new UCBienvenida();
             this.pnlPrincipal.Controls.Add(uCBienvenida);
@@ -117,6 +123,11 @@ namespace pryValdezIE
             UCUsuarios uCUsuarios = new UCUsuarios();
             this.pnlPrincipal.Controls.Add(uCUsuarios);
             uCUsuarios.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

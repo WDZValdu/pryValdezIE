@@ -40,7 +40,6 @@
             this.pctBordeProv = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
             this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlMenu.SuspendLayout();
@@ -48,8 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            this.pnlPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -122,7 +119,7 @@
             this.btnCerrarSesion.Image = global::pryValdezIE.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCerrarSesion.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnCerrarSesion.Location = new System.Drawing.Point(10, 533);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(8, 543);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Size = new System.Drawing.Size(188, 43);
             this.btnCerrarSesion.TabIndex = 3;
@@ -217,22 +214,10 @@
             // 
             // pnlPrincipal
             // 
-            this.pnlPrincipal.Controls.Add(this.pictureBox2);
             this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
             this.pnlPrincipal.Name = "pnlPrincipal";
             this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
             this.pnlPrincipal.TabIndex = 1;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::pryValdezIE.Properties.Resources.x;
-            this.pictureBox2.Location = new System.Drawing.Point(774, 6);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(17, 27);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // guna2Elipse1
             // 
@@ -260,8 +245,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            this.pnlPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -275,7 +258,6 @@
         private System.Windows.Forms.PictureBox pctBordeProv;
         private Guna.UI2.WinForms.Guna2Button btnCargarProv;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pctBordeCargarProv;
         private Guna.UI2.WinForms.Guna2Button btnCerrarSesion;
         private Guna.UI2.WinForms.Guna2Button btnUsuarios;

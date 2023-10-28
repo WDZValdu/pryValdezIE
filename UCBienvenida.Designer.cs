@@ -30,19 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnlBienvenida = new System.Windows.Forms.Panel();
+            this.pctCerrar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblContenido = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pctCerrar = new System.Windows.Forms.PictureBox();
+            this.txtVersion = new System.Windows.Forms.Label();
             this.pnlBienvenida.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBienvenida
             // 
             this.pnlBienvenida.BackColor = System.Drawing.Color.White;
+            this.pnlBienvenida.Controls.Add(this.txtVersion);
             this.pnlBienvenida.Controls.Add(this.pctCerrar);
             this.pnlBienvenida.Controls.Add(this.label1);
             this.pnlBienvenida.Controls.Add(this.lblContenido);
@@ -52,6 +54,17 @@
             this.pnlBienvenida.Name = "pnlBienvenida";
             this.pnlBienvenida.Size = new System.Drawing.Size(802, 588);
             this.pnlBienvenida.TabIndex = 3;
+            // 
+            // pctCerrar
+            // 
+            this.pctCerrar.Image = global::pryValdezIE.Properties.Resources.xCeleste;
+            this.pctCerrar.Location = new System.Drawing.Point(773, 6);
+            this.pctCerrar.Name = "pctCerrar";
+            this.pctCerrar.Size = new System.Drawing.Size(17, 27);
+            this.pctCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctCerrar.TabIndex = 4;
+            this.pctCerrar.TabStop = false;
+            this.pctCerrar.Click += new System.EventHandler(this.pctCerrar_Click);
             // 
             // label1
             // 
@@ -92,16 +105,16 @@
             this.guna2Elipse1.BorderRadius = 22;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // pctCerrar
+            // txtVersion
             // 
-            this.pctCerrar.Image = global::pryValdezIE.Properties.Resources.xCeleste;
-            this.pctCerrar.Location = new System.Drawing.Point(773, 6);
-            this.pctCerrar.Name = "pctCerrar";
-            this.pctCerrar.Size = new System.Drawing.Size(17, 27);
-            this.pctCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctCerrar.TabIndex = 4;
-            this.pctCerrar.TabStop = false;
-            this.pctCerrar.Click += new System.EventHandler(this.pctCerrar_Click);
+            this.txtVersion.AutoSize = true;
+            this.txtVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVersion.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtVersion.Location = new System.Drawing.Point(740, 571);
+            this.txtVersion.Name = "txtVersion";
+            this.txtVersion.Size = new System.Drawing.Size(57, 12);
+            this.txtVersion.TabIndex = 7;
+            this.txtVersion.Text = "Version 1.27";
             // 
             // UCBienvenida
             // 
@@ -113,8 +126,9 @@
             this.Name = "UCBienvenida";
             this.Size = new System.Drawing.Size(802, 588);
             this.pnlBienvenida.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.pnlBienvenida.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -127,5 +141,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.PictureBox pctCerrar;
+        private System.Windows.Forms.Label txtVersion;
     }
 }

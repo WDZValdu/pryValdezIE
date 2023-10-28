@@ -21,12 +21,19 @@ namespace pryValdezIE
             objBD = new clsInicioSesion();
             objBD.ConectarBD();
             objLog = new clsLog();
-
+            KeyPreview = true;
+            this.KeyDown += CerrarFrm_KeyDown;
 
         }
         Int32 contador = 0;
+        private void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit(); // Cierra la aplicación completa
+            }
+        }
 
-        
         private void btnProveedores_Click(object sender, EventArgs e)
         {
            string varUsuario = txtUsuario.Text; // Asigna el valor de varUsuario         
