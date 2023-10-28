@@ -32,6 +32,7 @@ namespace pryValdezIE
             }
         }
         int varContador = 0;
+        int varEncontro = 0;
         public void IngresarUsuario(string varNombre, string varContraseña, frmInicio frmInicio)
         {
 
@@ -60,19 +61,26 @@ namespace pryValdezIE
                         frmInicio.Hide();
                         frmCargar frmCargar = new frmCargar();
                         frmCargar.Show();
-
+                        varEncontro++;
                         break;
                     }
-                    else
-                    {
+                  /* else
+                   {
                         MessageBox.Show("Datos de inicio de sesion incorrectos");
                         varContador += 1;
-                        break;
-                    }
+                        
+                   }*/
                     
                                       
 
                 }
+                if (varEncontro == 0)
+                {
+                    MessageBox.Show("Datos de inicio de sesion incorrectos");
+                    varContador += 1;
+
+                }
+
                 if (varContador >= 3)
                 {
                     MessageBox.Show("Demaciados intentos de inicio de sesion, el sistema se cerrara");
