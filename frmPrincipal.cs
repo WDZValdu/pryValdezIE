@@ -61,6 +61,8 @@ namespace pryValdezIE
             pctBordeCargarProv.Visible = false;
             btnProveedores.Checked = true;
             btnCargarProv.Checked = false;
+            pctBordeBtnSocios.Visible = false;
+            btnSocios.Checked = false;
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
@@ -84,6 +86,8 @@ namespace pryValdezIE
             pctBordeCargarProv.Visible =true;
             btnProveedores.Checked = false;
             btnCargarProv.Checked = true;
+            pctBordeBtnSocios.Visible = false;
+            btnSocios.Checked = false;
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -110,10 +114,38 @@ namespace pryValdezIE
             pctBordeCargarProv.Visible = false;
             btnProveedores.Checked = false;
             btnCargarProv.Checked = false;
+            pctBordeBtnSocios.Visible = false;
+            btnSocios.Checked = false;
 
         }
 
-        private void btnUsuarios_Click_1(object sender, EventArgs e)
+        private void btnSocios_Click_1(object sender, EventArgs e)
+        {
+            string varAccion = "Ingreso a Socios";
+            DateTime varFecha = DateTime.Now;
+
+            objLog.CargarLog(varUsuario, varFecha, varAccion);
+
+            this.pnlPrincipal.Controls.Clear();
+            UCSocios uCSocios = new UCSocios();
+            this.pnlPrincipal.Controls.Add(uCSocios);
+            uCSocios.Show();
+            pctBordeBtnSocios.Visible = true;
+            btnSocios.Checked = true;
+            
+            pctBordeProv.Visible = false;
+
+            pctBordeCargarProv.Visible = false;
+            btnProveedores.Checked = false;
+            btnCargarProv.Checked = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
         {
             string varAccion = "Ingreso a Usuarios";
             DateTime varFecha = DateTime.Now;
@@ -124,11 +156,17 @@ namespace pryValdezIE
             UCUsuarios uCUsuarios = new UCUsuarios();
             this.pnlPrincipal.Controls.Add(uCUsuarios);
             uCUsuarios.Show();
-        }
+            btnSocios.Checked = true;
+            
+            
+            pctBordeBtnSocios.Visible = false;
+            btnSocios.Checked = false;
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
+            pctBordeProv.Visible = false;
 
+            pctBordeCargarProv.Visible = false;
+            btnProveedores.Checked = false;
+            btnCargarProv.Checked = false;
         }
     }
 }

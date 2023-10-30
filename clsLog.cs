@@ -27,7 +27,7 @@ namespace pryValdezIE
         {
             try
             {
-                string conexion = "Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\agusv\\source\\repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb";
+                string conexion = "Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = EL_CLUB.accdb";
                 conexionBD.ConnectionString = conexion;
                 conexionBD.Open();
                 

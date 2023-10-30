@@ -16,20 +16,18 @@ namespace pryValdezIE
         OleDbDataReader lectorBD;
         clsLog objLog;
         
-        public string EstadoConexion = "";
-        public string datosTabla;
-
+ 
         public void ConectarBD()
         {
             try
             {
-                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = C:\\Users\\agusv\\source\\repos\\pryValdezIE\\bin\\Debug\\EL_CLUB.accdb");
+                conexionBD = new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0;" + "Data Source = EL_CLUB.accdb");
                 conexionBD.Open();
-                EstadoConexion = "Conectado";
+                
             }
             catch (Exception ex)
             {
-                EstadoConexion = "Error" + ex.Message;
+                MessageBox.Show(ex.Message);
             }
         }
         int varContador = 0;

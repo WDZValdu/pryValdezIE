@@ -10,18 +10,22 @@ using System.Windows.Forms;
 
 namespace pryValdezIE
 {
-    public partial class UCUsuarios : UserControl
+    public partial class UCSocios : UserControl
     {
         clsBDSocios objBD;
-        public UCUsuarios()
+        public UCSocios()
         {
             InitializeComponent();
             objBD = new clsBDSocios();
             objBD.ConectarBD();
+
+            lblConectado.Text = objBD.EstadoConexion;
+            lblConectado.BackColor = Color.Green;
+
             objBD.TraerDatos(grilla);
         }
 
-        private void btnFiltrar_Click(object sender, EventArgs e)
+        private void btnFiltrar_Click_1(object sender, EventArgs e)
         {
             txtNumero.Visible = true;
             btnBuscar.Visible = true;
@@ -29,9 +33,9 @@ namespace pryValdezIE
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try
+            try 
             {
-                objBD.BuscarPorID(int.Parse(txtNumero.Text), grilla);
+                objBD.BuscarPorID(int.Parse(txtNumero.Text), grilla);               
 
             }
             catch (Exception)
@@ -39,5 +43,6 @@ namespace pryValdezIE
                 MessageBox.Show("Ingrese un numero");
             }
         }
+
     }
 }

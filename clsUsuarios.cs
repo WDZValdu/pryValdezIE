@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace pryValdezIE
 {
-    internal class clsBDSocios
+    internal class clsUsuarios
     {
         OleDbConnection conexionBD;
         OleDbCommand comandoBD;
@@ -41,17 +41,15 @@ namespace pryValdezIE
 
             comandoBD.Connection = conexionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "SOCIOS";
+            comandoBD.CommandText = "Usuarios";
 
             lectorBD = comandoBD.ExecuteReader();
 
             grilla.Columns.Add("ID", "ID");
-            grilla.Columns.Add("Nombre", "Nombre");
-            grilla.Columns.Add("Apellido", "Apellido");
-            grilla.Columns.Add("Pais", "Pais");
-            grilla.Columns.Add("Edad", "Edad");
-            grilla.Columns.Add("Ingreso", "Ingreso");
-            grilla.Columns.Add("Puntaje", "Puntaje");
+            grilla.Columns.Add("Usuario", "Usuario");
+            grilla.Columns.Add("Estado", "Estado");
+            grilla.Columns.Add("Categoria", "Categoria");
+            
 
             //leo como si fuera un archivo
             if (lectorBD.HasRows)
@@ -74,7 +72,7 @@ namespace pryValdezIE
             //q tipo de operacion quierp hacer y que me traiga TOD la tabla con el tabledirect
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             //Que tabla traigo
-            comandoBD.CommandText = "SOCIOS"; 
+            comandoBD.CommandText = "Usuarios"; 
             //abre la tabla y muestra por renglon
             lectorBD = comandoBD.ExecuteReader(); 
 
