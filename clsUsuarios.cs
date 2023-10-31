@@ -57,7 +57,7 @@ namespace pryValdezIE
                 while (lectorBD.Read())
                 {
                     datosTabla += "-" + lectorBD[0];
-                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2]);
                 }
             }
         }
@@ -90,7 +90,7 @@ namespace pryValdezIE
                         //MessageBox.Show("El Cliente " + lectorBD[0] + " Existente", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         grilla.Rows.Clear();
-                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2]);
                         encontro = 1;
                         break;
                     }
@@ -100,9 +100,10 @@ namespace pryValdezIE
                 {
 
                     MessageBox.Show("ID "+ codigo + " no existe");
-
+                    
                 }
             }
+            
         }
     }
 }

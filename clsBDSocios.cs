@@ -82,9 +82,9 @@ namespace pryValdezIE
             //SI TIENE FILAS
             if (lectorBD.HasRows) 
             {
-                
+                encontro = 0;
                 while (lectorBD.Read()) //mientras pueda leer, mostrar (leer)
-                {
+                {  
                     if (int.Parse(lectorBD[0].ToString()) == codigo)
                     {
 
@@ -98,11 +98,12 @@ namespace pryValdezIE
                     }
 
                 }
+                
                 if (encontro == 0)
                 {
 
                     MessageBox.Show("ID "+ codigo + " no existe");
-
+                    
                 }
             }
         }
