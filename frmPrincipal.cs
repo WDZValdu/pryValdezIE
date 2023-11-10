@@ -16,18 +16,31 @@ namespace pryValdezIE
     {
         string varUsuario;
         clsLog objLog = new clsLog();
-        public frmPrincipal(string usuario)
+        public frmPrincipal(string usuario, string varCat)
         {
             InitializeComponent();
             this.pnlPrincipal.Controls.Clear();
             UCBienvenida uCBienvenida = new UCBienvenida();
             this.pnlPrincipal.Controls.Add(uCBienvenida);
             uCBienvenida.Show();
-             varUsuario = usuario;
+            varUsuario = usuario;
 
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
-
+            if (varCat =="Administrador")
+            {
+                btnCargarProv.Visible = true;
+                btnProveedores.Visible = true;
+                btnSocios.Visible = true;
+                btnUsuarios.Visible = true;
+            }
+            else
+            {
+                btnCargarProv.Visible = true;
+                btnProveedores.Visible = true;
+                btnSocios.Visible = true;
+                btnUsuarios.Visible = false;
+            }
 
         }
 

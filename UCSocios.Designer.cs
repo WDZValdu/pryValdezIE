@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.lblConectado = new System.Windows.Forms.ToolStripStatusLabel();
@@ -41,9 +41,10 @@
             this.grilla = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
             this.txtNumero = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnFiltrar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBuscar = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEstadoCliente = new Guna.UI2.WinForms.Guna2Button();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grilla)).BeginInit();
             this.SuspendLayout();
@@ -77,46 +78,46 @@
             // 
             // grilla
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            this.grilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.White;
+            this.grilla.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
             this.grilla.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.grilla.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.grilla.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.grilla.ColumnHeadersHeight = 40;
             this.grilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grilla.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grilla.DefaultCellStyle = dataGridViewCellStyle23;
             this.grilla.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.grilla.Location = new System.Drawing.Point(237, 92);
             this.grilla.Name = "grilla";
             this.grilla.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grilla.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
             this.grilla.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.grilla.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(80)))), ((int)(((byte)(163)))));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.White;
+            this.grilla.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.grilla.Size = new System.Drawing.Size(559, 490);
             this.grilla.TabIndex = 1;
             this.grilla.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -156,34 +157,6 @@
             this.lblTitulo.Size = new System.Drawing.Size(97, 32);
             this.lblTitulo.TabIndex = 8;
             this.lblTitulo.Text = "Socios";
-
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btnBuscar.BorderRadius = 22;
-            this.btnBuscar.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnBuscar.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnBuscar.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
-            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Image = global::pryValdezIE.Properties.Resources.contrato;
-            this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnBuscar.ImageOffset = new System.Drawing.Point(10, 0);
-            this.btnBuscar.Location = new System.Drawing.Point(15, 210);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(193, 43);
-            this.btnBuscar.TabIndex = 7;
-            this.btnBuscar.Text = "Buscar ID";
-            this.btnBuscar.TextOffset = new System.Drawing.Point(17, 0);
-            this.btnBuscar.UseTransparentBackground = true;
-            this.btnBuscar.Visible = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtNumero
             // 
@@ -198,8 +171,8 @@
             this.txtNumero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtNumero.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtNumero.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumero.IconLeft = global::pryValdezIE.Properties.Resources.lapiz__2_;
-            this.txtNumero.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtNumero.IconLeft = global::pryValdezIE.Properties.Resources.Lupa;
+            this.txtNumero.IconLeftOffset = new System.Drawing.Point(12, 0);
             this.txtNumero.Location = new System.Drawing.Point(15, 151);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.PasswordChar = '\0';
@@ -209,7 +182,7 @@
             this.txtNumero.Size = new System.Drawing.Size(193, 43);
             this.txtNumero.TabIndex = 6;
             this.txtNumero.Visible = false;
-
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumero_KeyPress);
             // 
             // btnFiltrar
             // 
@@ -232,16 +205,72 @@
             this.btnFiltrar.Name = "btnFiltrar";
             this.btnFiltrar.Size = new System.Drawing.Size(193, 43);
             this.btnFiltrar.TabIndex = 5;
-            this.btnFiltrar.Text = "Filtrar Datos";
+            this.btnFiltrar.Text = "Filtrar Clientes";
             this.btnFiltrar.TextOffset = new System.Drawing.Point(17, 0);
             this.btnFiltrar.UseTransparentBackground = true;
             this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click_1);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btnBuscar.BorderRadius = 22;
+            this.btnBuscar.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnBuscar.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnBuscar.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnBuscar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBuscar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBuscar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBuscar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.ForeColor = System.Drawing.Color.White;
+            this.btnBuscar.Image = global::pryValdezIE.Properties.Resources.buscar;
+            this.btnBuscar.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBuscar.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnBuscar.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBuscar.Location = new System.Drawing.Point(15, 210);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(193, 43);
+            this.btnBuscar.TabIndex = 25;
+            this.btnBuscar.Text = "Buscar ID";
+            this.btnBuscar.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnBuscar.UseTransparentBackground = true;
+            this.btnBuscar.Visible = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // btnEstadoCliente
+            // 
+            this.btnEstadoCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnEstadoCliente.BorderRadius = 22;
+            this.btnEstadoCliente.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnEstadoCliente.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnEstadoCliente.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnEstadoCliente.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEstadoCliente.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEstadoCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEstadoCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEstadoCliente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnEstadoCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstadoCliente.ForeColor = System.Drawing.Color.White;
+            this.btnEstadoCliente.Image = global::pryValdezIE.Properties.Resources.lapiz;
+            this.btnEstadoCliente.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnEstadoCliente.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnEstadoCliente.Location = new System.Drawing.Point(15, 521);
+            this.btnEstadoCliente.Name = "btnEstadoCliente";
+            this.btnEstadoCliente.Size = new System.Drawing.Size(193, 43);
+            this.btnEstadoCliente.TabIndex = 26;
+            this.btnEstadoCliente.Text = "Cambiar Estado";
+            this.btnEstadoCliente.TextOffset = new System.Drawing.Point(17, 0);
+            this.btnEstadoCliente.UseTransparentBackground = true;
+            this.btnEstadoCliente.Visible = false;
+            this.btnEstadoCliente.Click += new System.EventHandler(this.btnEstadoCliente_Click);
             // 
             // UCSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnEstadoCliente);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtNumero);
@@ -269,7 +298,8 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private Guna.UI2.WinForms.Guna2Button btnFiltrar;
         private Guna.UI2.WinForms.Guna2TextBox txtNumero;
-        private Guna.UI2.WinForms.Guna2Button btnBuscar;
         private System.Windows.Forms.Label lblTitulo;
+        private Guna.UI2.WinForms.Guna2Button btnEstadoCliente;
+        private Guna.UI2.WinForms.Guna2Button btnBuscar;
     }
 }

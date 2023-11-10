@@ -13,10 +13,12 @@ namespace pryValdezIE
     public partial class UCSocios : UserControl
     {
         clsBDSocios objBD;
+        clsLog objlog;
         public UCSocios()
         {
             InitializeComponent();
             objBD = new clsBDSocios();
+            objlog = new clsLog();
             objBD.ConectarBD();
 
             lblConectado.Text = objBD.EstadoConexion;
@@ -35,7 +37,8 @@ namespace pryValdezIE
         {
             try 
             {
-                objBD.BuscarPorID(int.Parse(txtNumero.Text), grilla);               
+                objBD.BuscarPorID(int.Parse(txtNumero.Text), grilla);
+                btnEstadoCliente.Visible = true;
 
             }
             catch (Exception)
@@ -44,5 +47,19 @@ namespace pryValdezIE
             }
         }
 
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter) && e.KeyChar == 13)
+            {
+                btnBuscar_Click(sender, e);
+                e.Handled = true;
+                btnEstadoCliente.Visible = true;
+            }
+        }
+
+        private void btnEstadoCliente_Click(object sender, EventArgs e)
+        {
+            objlog.CambiarEstado(int.Parse(txtNumero.Text));
+        }
     }
 }

@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
             this.btnSocios = new Guna.UI2.WinForms.Guna2Button();
             this.pctBordeBtnSocios = new System.Windows.Forms.PictureBox();
@@ -43,6 +40,9 @@
             this.btnProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.pctBordeProv = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnSocios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).BeginInit();
@@ -66,22 +66,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(209, 598);
             this.pnlMenu.TabIndex = 0;
-            // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
-            this.pnlPrincipal.TabIndex = 1;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 22;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 22;
             // 
             // btnUsuarios
             // 
@@ -107,6 +91,7 @@
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.TextOffset = new System.Drawing.Point(10, 0);
             this.btnUsuarios.UseTransparentBackground = true;
+            this.btnUsuarios.Visible = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // btnSocios
@@ -133,6 +118,7 @@
             this.btnSocios.Text = "Socios";
             this.btnSocios.TextOffset = new System.Drawing.Point(10, 0);
             this.btnSocios.UseTransparentBackground = true;
+            this.btnSocios.Visible = false;
             this.btnSocios.Click += new System.EventHandler(this.btnSocios_Click_1);
             // 
             // pctBordeBtnSocios
@@ -196,6 +182,7 @@
             this.btnCargarProv.Text = "Cargar Proveedores";
             this.btnCargarProv.TextOffset = new System.Drawing.Point(17, 0);
             this.btnCargarProv.UseTransparentBackground = true;
+            this.btnCargarProv.Visible = false;
             this.btnCargarProv.Click += new System.EventHandler(this.btnCargarProv_Click);
             // 
             // pctBordeCargarProv
@@ -232,6 +219,7 @@
             this.btnProveedores.TabIndex = 0;
             this.btnProveedores.Text = "Proveedores";
             this.btnProveedores.UseTransparentBackground = true;
+            this.btnProveedores.Visible = false;
             this.btnProveedores.Click += new System.EventHandler(this.btnProveedores_Click);
             // 
             // pctBordeProv
@@ -255,6 +243,22 @@
             this.pctLogo.TabIndex = 1;
             this.pctLogo.TabStop = false;
             this.pctLogo.Click += new System.EventHandler(this.pctLogo_Click);
+            // 
+            // pnlPrincipal
+            // 
+            this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
+            this.pnlPrincipal.TabIndex = 1;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 22;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 22;
             // 
             // frmPrincipal
             // 

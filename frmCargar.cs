@@ -13,11 +13,13 @@ namespace pryValdezIE
     public partial class frmCargar : Form
     {
         private string varUsuario;
-        public frmCargar(string usuario)
+        private string varCategoria;
+        public frmCargar(string usuario, string varCat)
         {
             InitializeComponent();
             circularProgressBar1.Value = 0;
             varUsuario = usuario;
+            varCategoria = varCat;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -29,7 +31,7 @@ namespace pryValdezIE
                 timer1.Enabled = false;
 
                 this.Hide();
-                frmPrincipal form1 = new frmPrincipal(varUsuario);
+                frmPrincipal form1 = new frmPrincipal(varUsuario, varCategoria);
                 form1.Show();
             }
         }

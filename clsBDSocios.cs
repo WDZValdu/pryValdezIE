@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 using System.Data.OleDb;
 using System.Windows.Forms;
-
-
+using System.Management;
 
 namespace pryValdezIE
 {
@@ -52,15 +51,21 @@ namespace pryValdezIE
             grilla.Columns.Add("Edad", "Edad");
             grilla.Columns.Add("Ingreso", "Ingreso");
             grilla.Columns.Add("Puntaje", "Puntaje");
-
+            grilla.Columns.Add("Estado", "Estado");
             //leo como si fuera un archivo
             if (lectorBD.HasRows)
             {
                 while (lectorBD.Read())
                 {
                     datosTabla += "-" + lectorBD[0];
-                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+
+                    // Comprueba si lectorBD[8] es true
+                    string estado = lectorBD.GetBoolean(8) ? "Activo" : "Inactivo";
+
+                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7], estado);
+                    
                 }
+                
             }
         }
 
@@ -92,13 +97,18 @@ namespace pryValdezIE
                         //MessageBox.Show("El Cliente " + lectorBD[0] + " Existente", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         grilla.Rows.Clear();
-                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7]);
+                        // Comprueba si lectorBD[8] es true
+                        string estado = lectorBD.GetBoolean(8) ? "Activo" : "Inactivo";
+
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3], lectorBD[4], lectorBD[6], lectorBD[7], estado);
                         encontro = 1;
-                        break;
+
+                        
                     }
 
                 }
                 
+
                 if (encontro == 0)
                 {
 
@@ -107,5 +117,7 @@ namespace pryValdezIE
                 }
             }
         }
+
+        
     }
 }

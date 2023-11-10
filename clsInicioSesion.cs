@@ -59,11 +59,12 @@ namespace pryValdezIE
                         objLog = new clsLog();
                         string varAccion = "Inicio Sesion";
                         DateTime varFecha = DateTime.Now;
+                        string varCategoria = lectorBD[3].ToString();
 
                         objLog.CargarLog(varNombre, varFecha, varAccion);
-   
+                           
                         frmInicio.Hide();
-                        frmCargar frmCargar = new frmCargar(varNombre);
+                        frmCargar frmCargar = new frmCargar(varNombre, varCategoria);
                         frmCargar.Show();
                         varEncontro++;
                         break;
