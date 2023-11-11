@@ -35,6 +35,7 @@ namespace pryValdezIE
 
         public void TraerDatos(DataGridView grilla)
         {
+            ConectarBD();
             //instancia un objeto en la memoria
             comandoBD = new OleDbCommand();
 
@@ -57,8 +58,6 @@ namespace pryValdezIE
             {
                 while (lectorBD.Read())
                 {
-                    datosTabla += "-" + lectorBD[0];
-
                     // Comprueba si lectorBD[8] es true
                     string estado = lectorBD.GetBoolean(8) ? "Activo" : "Inactivo";
 
@@ -107,7 +106,7 @@ namespace pryValdezIE
                     }
 
                 }
-                
+                conexionBD.Close();
 
                 if (encontro == 0)
                 {

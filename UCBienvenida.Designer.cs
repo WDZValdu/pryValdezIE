@@ -64,7 +64,7 @@
             this.txtVersion.Name = "txtVersion";
             this.txtVersion.Size = new System.Drawing.Size(57, 12);
             this.txtVersion.TabIndex = 7;
-            this.txtVersion.Text = "Version 1.33";
+            this.txtVersion.Text = "Version 1.34";
             // 
             // pctCerrar
             // 

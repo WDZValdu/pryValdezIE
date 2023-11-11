@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace pryValdezIE
@@ -19,7 +20,9 @@ namespace pryValdezIE
             objBD = new clsUsuarios();
             objBD.ConectarBD();
             objBD.TraerDatos(grilla);
+            
         }
+        
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
@@ -38,6 +41,13 @@ namespace pryValdezIE
             {
                 MessageBox.Show("Ingrese un numero");
             }
+        }
+
+        private void btnCargarUsuario_Click(object sender, EventArgs e)
+        {
+            ucCargarUsuarios ucCargarUsuarios = new ucCargarUsuarios();
+            this.Hide();
+            ucCargarUsuarios.Show();
         }
     }
 }

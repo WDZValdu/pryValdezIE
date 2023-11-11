@@ -43,16 +43,19 @@
             this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.pctUsuarios = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnSocios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.Controls.Add(this.btnUsuarios);
+            this.pnlMenu.Controls.Add(this.pctUsuarios);
             this.pnlMenu.Controls.Add(this.btnSocios);
             this.pnlMenu.Controls.Add(this.pctBordeBtnSocios);
             this.pnlMenu.Controls.Add(this.btnCerrarSesion);
@@ -79,7 +82,7 @@
             this.btnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUsuarios.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.Image = global::pryValdezIE.Properties.Resources.contrato;
             this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -260,6 +263,17 @@
             // 
             this.guna2Elipse2.BorderRadius = 22;
             // 
+            // pctUsuarios
+            // 
+            this.pctUsuarios.Image = global::pryValdezIE.Properties.Resources.Union;
+            this.pctUsuarios.Location = new System.Drawing.Point(168, 350);
+            this.pctUsuarios.Name = "pctUsuarios";
+            this.pctUsuarios.Size = new System.Drawing.Size(38, 106);
+            this.pctUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctUsuarios.TabIndex = 7;
+            this.pctUsuarios.TabStop = false;
+            this.pctUsuarios.Visible = false;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +291,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -296,6 +311,7 @@
         private System.Windows.Forms.PictureBox pctBordeBtnSocios;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btnUsuarios;
+        private System.Windows.Forms.PictureBox pctUsuarios;
     }
 }
 

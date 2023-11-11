@@ -96,6 +96,12 @@
     <Compile Include="UCcargarProveedores1.Designer.cs">
       <DependentUpon>UCcargarProveedores1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucCargarUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCargarUsuarios.Designer.cs">
+      <DependentUpon>ucCargarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCProveedores .cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCcargarProveedores1.resx">
       <DependentUpon>UCcargarProveedores1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucCargarUsuarios.resx">
+      <DependentUpon>ucCargarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCProveedores .resx">
       <DependentUpon>UCProveedores .cs</DependentUpon>
@@ -293,6 +302,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+    <None Include="Resources\volver.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

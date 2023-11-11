@@ -59,7 +59,24 @@ namespace pryValdezIE
 
         private void btnEstadoCliente_Click(object sender, EventArgs e)
         {
-            objlog.CambiarEstado(int.Parse(txtNumero.Text));
+            try
+            {   
+                objlog.CambiarEstado(int.Parse(txtNumero.Text));
+                MessageBox.Show("El cliente con el ID " + txtNumero.Text + " se modifico correctamente");
+                grilla.Rows.Clear();
+                objBD.TraerDatos(grilla);
+                btnEstadoCliente.Visible = false;
+                txtNumero.Visible = false;
+                txtNumero.Clear();
+                btnBuscar.Visible = false;
+
+            }
+            catch (Exception E)
+            {
+
+                MessageBox.Show(E.Message);
+            }
+            
         }
     }
 }

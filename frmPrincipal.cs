@@ -25,6 +25,8 @@ namespace pryValdezIE
             uCBienvenida.Show();
             varUsuario = usuario;
 
+            
+
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
             if (varCat =="Administrador")
@@ -76,6 +78,8 @@ namespace pryValdezIE
             btnCargarProv.Checked = false;
             pctBordeBtnSocios.Visible = false;
             btnSocios.Checked = false;
+            btnUsuarios.Checked= false;
+            pctUsuarios.Visible= false;
         }
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
@@ -101,6 +105,8 @@ namespace pryValdezIE
             btnCargarProv.Checked = true;
             pctBordeBtnSocios.Visible = false;
             btnSocios.Checked = false;
+            btnUsuarios.Checked= false;
+            pctUsuarios.Visible= false;
         }
 
         private void btnCerrarSesion_Click(object sender, EventArgs e)
@@ -129,6 +135,8 @@ namespace pryValdezIE
             btnCargarProv.Checked = false;
             pctBordeBtnSocios.Visible = false;
             btnSocios.Checked = false;
+            btnUsuarios.Checked= false;
+            pctUsuarios.Visible= false;
 
         }
 
@@ -151,6 +159,8 @@ namespace pryValdezIE
             pctBordeCargarProv.Visible = false;
             btnProveedores.Checked = false;
             btnCargarProv.Checked = false;
+            btnUsuarios.Checked= false;
+            pctUsuarios.Visible= false;
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -160,6 +170,8 @@ namespace pryValdezIE
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+            btnUsuarios.Checked= true;
+            pctUsuarios.Visible= true;
             string varAccion = "Ingreso a Usuarios";
             DateTime varFecha = DateTime.Now;
 
@@ -167,7 +179,9 @@ namespace pryValdezIE
 
             this.pnlPrincipal.Controls.Clear();
             UCUsuarios uCUsuarios = new UCUsuarios();
+            ucCargarUsuarios ucCargarUsuarios = new ucCargarUsuarios();
             this.pnlPrincipal.Controls.Add(uCUsuarios);
+            this.pnlPrincipal.Controls.Add(ucCargarUsuarios);
             uCUsuarios.Show();
             btnSocios.Checked = true;
             
@@ -180,6 +194,10 @@ namespace pryValdezIE
             pctBordeCargarProv.Visible = false;
             btnProveedores.Checked = false;
             btnCargarProv.Checked = false;
+
         }
+        
+
     }
 }
+

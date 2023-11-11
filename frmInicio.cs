@@ -28,7 +28,7 @@ namespace pryValdezIE
             
 
         }
-        Int32 contador = 0;
+        
         private void CerrarFrm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
