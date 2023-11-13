@@ -36,6 +36,7 @@ namespace pryValdezIE
 
         public void TraerDatos(DataGridView grilla)
         {
+            string varCat;
             //instancia un objeto en la memoria
             comandoBD = new OleDbCommand();
 
@@ -57,7 +58,24 @@ namespace pryValdezIE
                 while (lectorBD.Read())
                 {
                     datosTabla += "-" + lectorBD[0];
-                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], lectorBD[3]);
+                   
+                    if (lectorBD[3].ToString() == "1")
+                    {
+                        varCat = "Administrador";
+                    }
+                    else
+                    {
+                        if (lectorBD[3].ToString() == "2")
+                        {
+                            varCat = "Encargado";
+                        }
+                        else
+                        {
+                            varCat = "Usuario";
+                        }
+                    }
+                    grilla.Rows.Add(lectorBD[0],lectorBD[1], lectorBD[2], varCat);
+
                 }
             }
         }
@@ -65,7 +83,8 @@ namespace pryValdezIE
         int encontro = 0;
         public void BuscarPorID(int codigo, DataGridView grilla)
         {
-
+            string varCat;
+            ConectarBD();
             comandoBD = new OleDbCommand();
 
             comandoBD.Connection = conexionBD;
@@ -90,12 +109,28 @@ namespace pryValdezIE
                         //MessageBox.Show("El Cliente " + lectorBD[0] + " Existente", "Consulta", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         grilla.Rows.Clear();
-                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], lectorBD[3]);
+                        if (lectorBD[3].ToString() == "1")
+                        {
+                            varCat = "Administrador";
+                        }
+                        else
+                        {
+                            if (lectorBD[3].ToString() == "2")
+                            {
+                                varCat = "Encargado";
+                            }
+                            else
+                            {
+                                varCat = "Usuario";
+                            }
+                        }
+                        grilla.Rows.Add(lectorBD[0], lectorBD[1], lectorBD[2], varCat);
                         encontro = 1;
                         break;
                     }
 
                 }
+                conexionBD.Close();
                 if (encontro == 0)
                 {
 

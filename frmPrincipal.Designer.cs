@@ -31,7 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.btnUsuarios = new Guna.UI2.WinForms.Guna2Button();
+            this.pctUsuarios = new System.Windows.Forms.PictureBox();
             this.btnSocios = new Guna.UI2.WinForms.Guna2Button();
             this.pctBordeBtnSocios = new System.Windows.Forms.PictureBox();
             this.btnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
@@ -40,16 +44,12 @@
             this.btnProveedores = new Guna.UI2.WinForms.Guna2Button();
             this.pctBordeProv = new System.Windows.Forms.PictureBox();
             this.pctLogo = new System.Windows.Forms.PictureBox();
-            this.pnlPrincipal = new System.Windows.Forms.Panel();
-            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.pctUsuarios = new System.Windows.Forms.PictureBox();
             this.pnlMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pctUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnSocios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -70,13 +70,29 @@
             this.pnlMenu.Size = new System.Drawing.Size(209, 598);
             this.pnlMenu.TabIndex = 0;
             // 
+            // pnlPrincipal
+            // 
+            this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
+            this.pnlPrincipal.TabIndex = 1;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 22;
+            this.guna2Elipse1.TargetControl = this;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.BorderRadius = 22;
+            // 
             // btnUsuarios
             // 
             this.btnUsuarios.BackColor = System.Drawing.Color.Transparent;
             this.btnUsuarios.BorderRadius = 22;
             this.btnUsuarios.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnUsuarios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnUsuarios.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnUsuarios.CheckedState.Image = global::pryValdezIE.Properties.Resources.usuario__2_;
             this.btnUsuarios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUsuarios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUsuarios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -84,9 +100,10 @@
             this.btnUsuarios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btnUsuarios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
-            this.btnUsuarios.Image = global::pryValdezIE.Properties.Resources.contrato;
+            this.btnUsuarios.Image = global::pryValdezIE.Properties.Resources.usuario__1_;
             this.btnUsuarios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUsuarios.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnUsuarios.ImageSize = new System.Drawing.Size(30, 30);
             this.btnUsuarios.Location = new System.Drawing.Point(10, 383);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(188, 43);
@@ -97,13 +114,24 @@
             this.btnUsuarios.Visible = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
+            // pctUsuarios
+            // 
+            this.pctUsuarios.Image = global::pryValdezIE.Properties.Resources.Union;
+            this.pctUsuarios.Location = new System.Drawing.Point(168, 350);
+            this.pctUsuarios.Name = "pctUsuarios";
+            this.pctUsuarios.Size = new System.Drawing.Size(38, 106);
+            this.pctUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pctUsuarios.TabIndex = 7;
+            this.pctUsuarios.TabStop = false;
+            this.pctUsuarios.Visible = false;
+            // 
             // btnSocios
             // 
             this.btnSocios.BackColor = System.Drawing.Color.Transparent;
             this.btnSocios.BorderRadius = 22;
             this.btnSocios.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnSocios.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnSocios.CheckedState.Image = global::pryValdezIE.Properties.Resources.contrato__1_;
+            this.btnSocios.CheckedState.Image = global::pryValdezIE.Properties.Resources.trabajo_en_equipo__1_;
             this.btnSocios.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSocios.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSocios.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -111,9 +139,10 @@
             this.btnSocios.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.btnSocios.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSocios.ForeColor = System.Drawing.Color.White;
-            this.btnSocios.Image = global::pryValdezIE.Properties.Resources.contrato;
+            this.btnSocios.Image = global::pryValdezIE.Properties.Resources.trabajo_en_equipo;
             this.btnSocios.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSocios.ImageOffset = new System.Drawing.Point(10, 0);
+            this.btnSocios.ImageSize = new System.Drawing.Size(25, 25);
             this.btnSocios.Location = new System.Drawing.Point(10, 304);
             this.btnSocios.Name = "btnSocios";
             this.btnSocios.Size = new System.Drawing.Size(188, 43);
@@ -247,33 +276,6 @@
             this.pctLogo.TabStop = false;
             this.pctLogo.Click += new System.EventHandler(this.pctLogo_Click);
             // 
-            // pnlPrincipal
-            // 
-            this.pnlPrincipal.Location = new System.Drawing.Point(206, 0);
-            this.pnlPrincipal.Name = "pnlPrincipal";
-            this.pnlPrincipal.Size = new System.Drawing.Size(807, 598);
-            this.pnlPrincipal.TabIndex = 1;
-            // 
-            // guna2Elipse1
-            // 
-            this.guna2Elipse1.BorderRadius = 22;
-            this.guna2Elipse1.TargetControl = this;
-            // 
-            // guna2Elipse2
-            // 
-            this.guna2Elipse2.BorderRadius = 22;
-            // 
-            // pctUsuarios
-            // 
-            this.pctUsuarios.Image = global::pryValdezIE.Properties.Resources.Union;
-            this.pctUsuarios.Location = new System.Drawing.Point(168, 350);
-            this.pctUsuarios.Name = "pctUsuarios";
-            this.pctUsuarios.Size = new System.Drawing.Size(38, 106);
-            this.pctUsuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctUsuarios.TabIndex = 7;
-            this.pctUsuarios.TabStop = false;
-            this.pctUsuarios.Visible = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -287,11 +289,11 @@
             this.Name = "frmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pctUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeBtnSocios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeCargarProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctBordeProv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pctUsuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -300,7 +302,6 @@
 
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.PictureBox pctLogo;
-        private System.Windows.Forms.Panel pnlPrincipal;
         private Guna.UI2.WinForms.Guna2Button btnProveedores;
         private System.Windows.Forms.PictureBox pctBordeProv;
         private Guna.UI2.WinForms.Guna2Button btnCargarProv;
@@ -312,6 +313,7 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btnUsuarios;
         private System.Windows.Forms.PictureBox pctUsuarios;
+        public System.Windows.Forms.Panel pnlPrincipal;
     }
 }
 

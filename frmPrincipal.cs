@@ -12,10 +12,13 @@ using System.Windows.Forms;
 namespace pryValdezIE
 {
     using System.IO;
+    using System.Security.Cryptography.X509Certificates;
+
     public partial class frmPrincipal : Form
     {
         string varUsuario;
         clsLog objLog = new clsLog();
+        public static Panel pnlP;
         public frmPrincipal(string usuario, string varCat)
         {
             InitializeComponent();
@@ -24,12 +27,13 @@ namespace pryValdezIE
             this.pnlPrincipal.Controls.Add(uCBienvenida);
             uCBienvenida.Show();
             varUsuario = usuario;
+            pnlP = pnlPrincipal;
 
             
 
             KeyPreview = true;
             this.KeyDown += CerrarFrm_KeyDown;
-            if (varCat =="Administrador")
+            if (varCat =="1")
             {
                 btnCargarProv.Visible = true;
                 btnProveedores.Visible = true;
@@ -168,6 +172,7 @@ namespace pryValdezIE
 
         }
 
+        
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             btnUsuarios.Checked= true;
@@ -180,8 +185,10 @@ namespace pryValdezIE
             this.pnlPrincipal.Controls.Clear();
             UCUsuarios uCUsuarios = new UCUsuarios();
             ucCargarUsuarios ucCargarUsuarios = new ucCargarUsuarios();
+            UCUsuarios us = new UCUsuarios();
             this.pnlPrincipal.Controls.Add(uCUsuarios);
             this.pnlPrincipal.Controls.Add(ucCargarUsuarios);
+            //this.pnlPrincipal.Controls.Add(us);
             uCUsuarios.Show();
             btnSocios.Checked = true;
             
@@ -196,7 +203,21 @@ namespace pryValdezIE
             btnCargarProv.Checked = false;
 
         }
-        
+
+        public  static void Volver()
+        {
+            pnlP.Controls.Clear();
+            UCUsuarios uCUsuarios = new UCUsuarios();
+            pnlP.Controls.Add(uCUsuarios);
+
+        }
+        public static void CargarUsuarios()
+        {
+            pnlP.Controls.Clear();
+            ucCargarUsuarios ucCargarU = new ucCargarUsuarios();
+            pnlP.Controls.Add(ucCargarU);
+
+        }
 
     }
 }

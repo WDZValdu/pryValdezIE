@@ -195,26 +195,26 @@
             // lstPerfil
             // 
             this.lstPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.lstPerfil.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.lstPerfil.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.lstPerfil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lstPerfil.FocusedColor = System.Drawing.Color.Empty;
+            this.lstPerfil.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lstPerfil.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.lstPerfil.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.lstPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.lstPerfil.ItemHeight = 30;
-            this.lstPerfil.Location = new System.Drawing.Point(345, 371);
+            this.lstPerfil.Location = new System.Drawing.Point(345, 366);
             this.lstPerfil.Name = "lstPerfil";
             this.lstPerfil.Size = new System.Drawing.Size(221, 36);
-            this.lstPerfil.TabIndex = 20;
+            this.lstPerfil.TabIndex = 25;
             // 
             // ucCargarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lstPerfil);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.lstPerfil);
             this.Controls.Add(this.btnCargarUsuario);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);

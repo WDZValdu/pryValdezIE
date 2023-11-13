@@ -35,16 +35,18 @@ namespace pryValdezIE
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 objBD.BuscarPorID(int.Parse(txtNumero.Text), grilla);
                 btnEstadoCliente.Visible = true;
-
             }
             catch (Exception)
             {
-                MessageBox.Show("Ingrese un numero");
+                MessageBox.Show("Ingrese un numero de ID");
+                
             }
+            
+            
         }
 
         private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)

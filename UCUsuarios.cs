@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using System.Web.UI.WebControls.WebParts;
 
 namespace pryValdezIE
 {
@@ -18,6 +19,7 @@ namespace pryValdezIE
         {
             InitializeComponent();
             objBD = new clsUsuarios();
+            this.Show();
             objBD.ConectarBD();
             objBD.TraerDatos(grilla);
             
@@ -45,9 +47,17 @@ namespace pryValdezIE
 
         private void btnCargarUsuario_Click(object sender, EventArgs e)
         {
-            ucCargarUsuarios ucCargarUsuarios = new ucCargarUsuarios();
-            this.Hide();
-            ucCargarUsuarios.Show();
+            frmPrincipal.CargarUsuarios();    
+        }
+
+        private void txtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == Convert.ToChar(Keys.Enter) && e.KeyChar == 13)
+            {
+                btnBuscar_Click(sender, e);
+                e.Handled = true;
+                
+            }
         }
     }
 }

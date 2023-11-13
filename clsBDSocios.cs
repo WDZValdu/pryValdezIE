@@ -17,7 +17,7 @@ namespace pryValdezIE
         OleDbDataReader lectorBD;
 
         public string EstadoConexion = "";
-        public string datosTabla;
+        
 
         public void ConectarBD()
         {
@@ -71,7 +71,7 @@ namespace pryValdezIE
         int encontro = 0;
         public void BuscarPorID(int codigo, DataGridView grilla)
         {
-
+            ConectarBD();
             comandoBD = new OleDbCommand();
 
             comandoBD.Connection = conexionBD;

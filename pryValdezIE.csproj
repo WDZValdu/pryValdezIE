@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsBDSocios.cs" />
+    <Compile Include="clsCargarUsuario.cs" />
     <Compile Include="clsLog.cs" />
     <Compile Include="clsUsuarios.cs" />
     <Compile Include="frmPrincipal.cs">
@@ -306,6 +307,18 @@
   <ItemGroup>
     <None Include="Resources\usuario1.png" />
     <None Include="Resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trabajo-en-equipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trabajo-en-equipo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %282%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linklblOlvidadoCont = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtContraseña = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnIniciarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -66,51 +66,30 @@
             this.panel1.Size = new System.Drawing.Size(345, 317);
             this.panel1.TabIndex = 0;
             // 
-            // linkLabel1
+            // txtUsuario
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
-            this.linkLabel1.Location = new System.Drawing.Point(110, 138);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(130, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Has olvidado tu usuario?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linklblOlvidadoCont
-            // 
-            this.linklblOlvidadoCont.AutoSize = true;
-            this.linklblOlvidadoCont.LinkColor = System.Drawing.Color.Silver;
-            this.linklblOlvidadoCont.Location = new System.Drawing.Point(101, 215);
-            this.linklblOlvidadoCont.Name = "linklblOlvidadoCont";
-            this.linklblOlvidadoCont.Size = new System.Drawing.Size(149, 13);
-            this.linklblOlvidadoCont.TabIndex = 5;
-            this.linklblOlvidadoCont.TabStop = true;
-            this.linklblOlvidadoCont.Text = "¿Has olvidado tu contraseña?";
-            this.linklblOlvidadoCont.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblOlvidadoCont_LinkClicked);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(64, 156);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Contraseña:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(64, 79);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Usuario:";
+            this.txtUsuario.AutoRoundedCorners = true;
+            this.txtUsuario.BorderRadius = 15;
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuario.DefaultText = "";
+            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.IconLeft = global::pryValdezIE.Properties.Resources.usuario;
+            this.txtUsuario.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtUsuario.Location = new System.Drawing.Point(68, 102);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PasswordChar = '\0';
+            this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtUsuario.PlaceholderText = "Ingrese su usuario";
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.Size = new System.Drawing.Size(214, 33);
+            this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
             // 
             // txtContraseña
             // 
@@ -137,30 +116,53 @@
             this.txtContraseña.TabIndex = 1;
             this.txtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseña_KeyPress);
             // 
-            // txtUsuario
+            // linkLabel1
             // 
-            this.txtUsuario.AutoRoundedCorners = true;
-            this.txtUsuario.BorderRadius = 15;
-            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtUsuario.DefaultText = "";
-            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsuario.IconLeft = global::pryValdezIE.Properties.Resources.usuario;
-            this.txtUsuario.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtUsuario.Location = new System.Drawing.Point(68, 102);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.PasswordChar = '\0';
-            this.txtUsuario.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtUsuario.PlaceholderText = "Ingrese su usuario";
-            this.txtUsuario.SelectedText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(214, 33);
-            this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsuario_KeyPress);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.LinkColor = System.Drawing.Color.Silver;
+            this.linkLabel1.Location = new System.Drawing.Point(110, 138);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(130, 13);
+            this.linkLabel1.TabIndex = 4;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "¿Has olvidado tu usuario?";
+            this.linkLabel1.Visible = false;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linklblOlvidadoCont
+            // 
+            this.linklblOlvidadoCont.AutoSize = true;
+            this.linklblOlvidadoCont.LinkColor = System.Drawing.Color.Silver;
+            this.linklblOlvidadoCont.Location = new System.Drawing.Point(101, 215);
+            this.linklblOlvidadoCont.Name = "linklblOlvidadoCont";
+            this.linklblOlvidadoCont.Size = new System.Drawing.Size(149, 13);
+            this.linklblOlvidadoCont.TabIndex = 5;
+            this.linklblOlvidadoCont.TabStop = true;
+            this.linklblOlvidadoCont.Text = "¿Has olvidado tu contraseña?";
+            this.linklblOlvidadoCont.Visible = false;
+            this.linklblOlvidadoCont.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linklblOlvidadoCont_LinkClicked);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(64, 156);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 20);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Contraseña:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(64, 79);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Usuario:";
             // 
             // pictureBox2
             // 

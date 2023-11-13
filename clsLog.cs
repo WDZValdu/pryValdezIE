@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,19 +146,19 @@ namespace pryValdezIE
             // Establece el tipo de comando y la tabla
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             //Que tabla traigo
-            comandoBD.CommandText = "Usuarios";
+            comandoBD.CommandText = "Categoria";
 
             DataSet objds = new DataSet();
 
             objda = new OleDbDataAdapter(comandoBD);
             // ejecutar la lectura de la tabla y almacenar su contenido en el dataAdapter
-            objda.Fill(objds, "Usuarios");
+            objda.Fill(objds, "Categoria");
 
-            if (objds.Tables["Usuarios"].Rows.Count > 0)
+            if (objds.Tables["Categoria"].Rows.Count > 0)
             {
                 string datos = ""; // variable auxiliar para almacenar los datos de la tabla
                                    // recorrer los registros
-                foreach (DataRow dr in objds.Tables["Usuarios"].Rows)
+                foreach (DataRow dr in objds.Tables["Categoria"].Rows)
                 {
                     // concatenar los campos de la tabla 'Cantantes': 'IdCantante' y 'Nombre'
                     datos += dr["ID"].ToString() + ", " + dr["Categoria"] + "\r\n";
@@ -168,54 +169,10 @@ namespace pryValdezIE
             
             lstPerfil.DisplayMember = "Categoria";
             lstPerfil.ValueMember = "ID";
-            lstPerfil.DataSource = objds.Tables["Usuarios"];
+            lstPerfil.DataSource = objds.Tables["Categoria"];
             conexionBD.Close();
             
         }
-
-        public void NuevoUsuario (string varUsuario, string varContraseña, string Lst)
-        {
-            ConectarBD();
-            comandoBD = new OleDbCommand();
-
-            comandoBD.Connection = conexionBD;
-
-
-            // Establece el tipo de comando y la tabla
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            //Que tabla traigo
-            comandoBD.CommandText = "Usuarios";
-
-
-
-            // crear el objeto DataAdapter pasando como parámetro el objeto comando que queremos vincular
-            objDataAdap = new OleDbDataAdapter(comandoBD);
-            // ejecutar la lectura de la tabla y almacenar su contenido en el dataAdapter
-            objDataAdap.Fill(objDataSet, "Usuarios");
-            // obtenemos una referencia a la tabla
-
-
-            DataTable datatable = objDataSet.Tables["Usuarios"];
-
-            // creamos el nuevo DataRow con la estructura de campos de la tabla
-            DataRow datarow = datatable.NewRow();
-            // asignamos los valores a todos los campos del DataRow
-            datarow["Usuario"] = varUsuario;
-            datarow["Contraseña"] = varContraseña;
-            datarow["Categoria"] = Lst;
-
-            // agregamos el DataRow a la tabla
-
-            datatable.Rows.Add(datarow);
-
-            // creamos el objeto OledBCommandBuilder pasando como parámetro el DataAdapter
-            OleDbCommandBuilder cbr = new OleDbCommandBuilder(objDataAdap);
-
-            // actualizamos la base con los cambios realizados
-            objDataAdap.Update(objDataSet, "Usuarios");
-            conexionBD.Close();
-        }
-
 
     }
 }
