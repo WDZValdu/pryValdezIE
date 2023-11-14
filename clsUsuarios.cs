@@ -48,7 +48,7 @@ namespace pryValdezIE
 
             grilla.Columns.Add("ID", "ID");
             grilla.Columns.Add("Usuario", "Usuario");
-            grilla.Columns.Add("Estado", "Estado");
+            grilla.Columns.Add("Contraseña", "Contraseña");
             grilla.Columns.Add("Categoria", "Categoria");
             
 
